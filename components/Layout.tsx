@@ -20,7 +20,7 @@ const HeaderWrapper = styled.header`
     }
 
     height: 0;
-    padding-bottom: 70px;
+    padding-bottom: 15px;
 
     ${media.lessThan("small")`
         max-width: 23rem;
@@ -59,29 +59,51 @@ const Body = styled.body`
     }
 `;
 
+const Footer = styled.footer`
+    background-color: #8b5def;
+
+    width: 100%;
+    height: 40px;
+
+    bottom: 0; /*下に固定*/
+
+    margin-top: auto;
+`;
+
+const Flex = styled.div`
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+`;
+
 const Layout = ({ children, title = "rakutek.dev" }: Props) => (
-    <Body>
-        <Head>
-            <title>{title}</title>
-            <meta charSet="utf-8" />
-            <meta
-                name="viewport"
-                content="initial-scale=1.0, width=device-width"
-            />
-        </Head>
+    <>
+        <Body>
+            <Head>
+                <title>{title}</title>
+                <meta charSet="utf-8" />
+                <meta
+                    name="viewport"
+                    content="initial-scale=1.0, width=device-width"
+                />
+            </Head>
 
-        <HeaderWrapper>
-            <Link href="/" as={""}>
-                <a>rakutek.dev🧑‍💻</a>
-            </Link>
+            <HeaderWrapper>
+                <Link href="/" as={""}>
+                    <a>rakutek.dev🧑‍💻</a>
+                </Link>
 
-            <hr />
-        </HeaderWrapper>
+                <hr />
+            </HeaderWrapper>
 
-        <Wrapper>
-            <Main>{children}</Main>
-        </Wrapper>
-    </Body>
+            <Flex>
+                <Wrapper>
+                    <Main>{children}</Main>
+                </Wrapper>
+
+                <Footer>.</Footer>
+            </Flex>
+        </Body>
+    </>
 );
-
 export default Layout;
