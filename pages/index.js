@@ -4,7 +4,12 @@ import Date from '../components/date'
 
 import {getSortedPostsData} from '../lib/posts'
 
-import utilStyles from '../styles/utils.module.css'
+
+import styled from "styled-components";
+
+const Light = styled.small`
+ color: #666;
+`
 
 
 const IndexPage = ({allPostsData}) => (
@@ -18,14 +23,15 @@ const IndexPage = ({allPostsData}) => (
 
 
         {allPostsData.map(({id, date, title}) => (
-            <li className={utilStyles.listItem} key={id}>
+            <li>
                 <Link href="/posts/[id]" as={`/posts/${id}`}>
                     <a>{title}</a>
                 </Link>
                 <br/>
-                <small className={utilStyles.lightText}>
-                <Date dateString={date}/>
-                </small>
+                <Light>
+                    <Date dateString={date}/>
+                </Light>
+
             </li>
         ))}
 

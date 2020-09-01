@@ -2,24 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e230f13-38d7-4443-80ef-0e851c21bbc1" name="デフォルト変更リスト" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/next-blog.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/date.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/layout.module.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/posts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/posts/[id].js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/pre-rendering.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/ssg-ssr.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/global.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/styles/utils.module.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/next-pwa-template.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/utils.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/utils.module.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +32,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
@@ -81,8 +68,16 @@
       <option name="presentableId" value="Default" />
       <updated>1598926314556</updated>
       <workItem from="1598926315761" duration="107000" />
-      <workItem from="1598926439798" duration="3288000" />
+      <workItem from="1598926439798" duration="7429000" />
     </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1598935563860</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1598935563860</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -90,24 +85,46 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="939" height="191" key="GridCell.Tab.0.bottom" timestamp="1598935074576">
+    <state x="6" y="41" key="CommitChangelistDialog2" timestamp="1598935563723">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="939" height="191" key="GridCell.Tab.0.bottom/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598935074576" />
-    <state width="939" height="191" key="GridCell.Tab.0.center" timestamp="1598935074575">
+    <state x="6" y="41" key="CommitChangelistDialog2/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598935563723" />
+    <state x="121" y="336" key="EditFileWatcherDialog" timestamp="1598937369915">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="939" height="191" key="GridCell.Tab.0.center/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598935074575" />
-    <state width="939" height="191" key="GridCell.Tab.0.left" timestamp="1598935074574">
+    <state x="121" y="336" key="EditFileWatcherDialog/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598937369915" />
+    <state width="939" height="191" key="GridCell.Tab.0.bottom" timestamp="1598944697987">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="939" height="191" key="GridCell.Tab.0.left/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598935074574" />
-    <state width="939" height="191" key="GridCell.Tab.0.right" timestamp="1598935074575">
+    <state width="939" height="191" key="GridCell.Tab.0.bottom/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598944697987" />
+    <state width="939" height="191" key="GridCell.Tab.0.center" timestamp="1598944697985">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="939" height="191" key="GridCell.Tab.0.right/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598935074575" />
+    <state width="939" height="191" key="GridCell.Tab.0.center/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598944697985" />
+    <state width="939" height="191" key="GridCell.Tab.0.left" timestamp="1598944697984">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="939" height="191" key="GridCell.Tab.0.left/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598944697984" />
+    <state width="939" height="191" key="GridCell.Tab.0.right" timestamp="1598944697986">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="939" height="191" key="GridCell.Tab.0.right/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598944697986" />
+    <state x="0" y="190" key="SettingsEditor" timestamp="1598937370946">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="0" y="190" key="SettingsEditor/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598937370946" />
+    <state x="80" y="287" key="Vcs.Push.Dialog.v2" timestamp="1598935553067">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="80" y="287" key="Vcs.Push.Dialog.v2/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598935553067" />
+    <state x="157" y="290" width="645" height="522" key="find.popup" timestamp="1598935972414">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="157" y="290" width="645" height="522" key="find.popup/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598935972414" />
     <state x="276" y="442" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1598926372899">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>

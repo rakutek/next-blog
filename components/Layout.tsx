@@ -18,12 +18,34 @@ const Layout = ({children, title = 'This is the default title'}: Props) => (
             <p>rakutek.dev</p>
         </header>
 
-        {children}
+        <div className={"wrapper"}>
+            <div className={"main"}>
+                {children}
+            </div>
+
+        </div>
 
         <footer>
             <p>footer</p>
         </footer>
+
+        <style jsx>{`
+            .wrapper {
+              margin: 0 auto;
+              text-align: center;
+            }
+            
+            .main {
+              text-align: left;
+              
+ display: inline-block;
+            }
+        `}</style>
+
+
     </div>
+
+
 )
 
 export default Layout
