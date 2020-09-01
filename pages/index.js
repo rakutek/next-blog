@@ -17,7 +17,7 @@ const Title = styled.a`
 `;
 
 const IndexPage = ({ allPostsData }) => (
-    <Layout title="Home | Next.js + TypeScript Example">
+    <Layout title="rakutek.dev">
         <h1>Blog</h1>
 
         {allPostsData.map(({ id, date, title }) => (

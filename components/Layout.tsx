@@ -50,7 +50,7 @@ const Body = styled.body`
     }
 `;
 
-const Layout = ({ children, title = "This is the default title" }: Props) => (
+const Layout = ({ children, title = "rakutek.dev" }: Props) => (
     <Body>
         <Head>
             <title>{title}</title>
