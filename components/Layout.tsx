@@ -2,6 +2,7 @@ import React, { ReactNode } from "react";
 import Head from "next/head";
 
 import styled from "styled-components";
+import media from "styled-media-query";
 
 type Props = {
     children?: ReactNode;
@@ -17,6 +18,11 @@ const HeaderWrapper = styled.header`
 
     height: 0;
     padding-bottom: 70px;
+
+    ${media.lessThan("medium")`
+        max-width: 23rem;
+        padding-left:9px;
+        `}
 `;
 
 const Wrapper = styled.div`
@@ -26,10 +32,9 @@ const Wrapper = styled.div`
 
 const Main = styled.div`
     text-align: left;
-
     display: inline-block;
-
     padding-top: 60px;
+    padding-left: 7px;
 `;
 
 const Body = styled.body`

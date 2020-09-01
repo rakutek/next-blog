@@ -3,6 +3,7 @@ import { getAllPostIds, getPostData } from "../lib/posts";
 import Head from "next/head";
 
 import styled from "styled-components";
+import media from "styled-media-query";
 
 const HeadingXl = styled.h1`
     font-size: 2rem;
@@ -14,6 +15,10 @@ const HeadingXl = styled.h1`
 
 const Article = styled.article`
     max-width: 48rem;
+
+    ${media.lessThan("medium")`
+       word-break: break-all;
+`}
 `;
 
 export default function Post({ postData }) {
