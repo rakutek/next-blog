@@ -1,43 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3e230f13-38d7-4443-80ef-0e851c21bbc1" name="デフォルト変更リスト" comment="">
-      <change afterPath="$PROJECT_DIR$/posts/pre-renderingのコピー.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/pre-renderingのコピー10.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/pre-renderingのコピー11.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/pre-renderingのコピー12.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/pre-renderingのコピー13.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/pre-renderingのコピー14.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/pre-renderingのコピー15.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/pre-renderingのコピー2.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/pre-renderingのコピー3.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/pre-renderingのコピー4.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/pre-renderingのコピー5.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/pre-renderingのコピー6.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/pre-renderingのコピー7.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/pre-renderingのコピー8.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/pre-renderingのコピー9.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/ssg-ssrのコピー.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/ssg-ssrのコピー10.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/ssg-ssrのコピー11.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/ssg-ssrのコピー12.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/ssg-ssrのコピー13.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/ssg-ssrのコピー14.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/ssg-ssrのコピー15.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/ssg-ssrのコピー2.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/ssg-ssrのコピー3.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/ssg-ssrのコピー4.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/ssg-ssrのコピー5.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/ssg-ssrのコピー6.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/ssg-ssrのコピー7.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/ssg-ssrのコピー8.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/posts/ssg-ssrのコピー9.md" afterDir="false" />
+    <list default="true" id="3e230f13-38d7-4443-80ef-0e851c21bbc1" name="デフォルト変更リスト" comment="記事デザイン調整">
+      <change afterPath="$PROJECT_DIR$/.firebase/hosting.b3V0.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.firebaserc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/firebase.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/posts/[id].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/posts/[id].js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/utils.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/utils.module.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,6 +58,16 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="deploy" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="deploy" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -98,9 +78,21 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="export" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="export" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.deploy" />
+        <item itemvalue="npm.export" />
         <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
@@ -114,7 +106,7 @@
       <option name="presentableId" value="Default" />
       <updated>1598926314556</updated>
       <workItem from="1598926315761" duration="107000" />
-      <workItem from="1598926439798" duration="10117000" />
+      <workItem from="1598926439798" duration="13662000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1598935563860</created>
@@ -130,7 +122,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598945584432</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="記事デザイン調整">
+      <created>1598948270074</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1598948270074</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,33 +139,34 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init" />
     <MESSAGE value="中央揃え" />
-    <option name="LAST_COMMIT_MESSAGE" value="中央揃え" />
+    <MESSAGE value="記事デザイン調整" />
+    <option name="LAST_COMMIT_MESSAGE" value="記事デザイン調整" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="6" y="41" key="CommitChangelistDialog2" timestamp="1598945584332">
+    <state x="107" y="89" width="948" height="929" key="CommitChangelistDialog2" timestamp="1598951234811">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="6" y="41" key="CommitChangelistDialog2/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598945584332" />
+    <state x="107" y="89" width="948" height="929" key="CommitChangelistDialog2/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598951234811" />
     <state x="121" y="336" key="EditFileWatcherDialog" timestamp="1598937369915">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="121" y="336" key="EditFileWatcherDialog/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598937369915" />
-    <state width="939" height="191" key="GridCell.Tab.0.bottom" timestamp="1598947878808">
+    <state width="939" height="271" key="GridCell.Tab.0.bottom" timestamp="1598951697408">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="939" height="191" key="GridCell.Tab.0.bottom/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598947878808" />
-    <state width="939" height="191" key="GridCell.Tab.0.center" timestamp="1598947878807">
+    <state width="939" height="271" key="GridCell.Tab.0.bottom/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598951697408" />
+    <state width="939" height="271" key="GridCell.Tab.0.center" timestamp="1598951697407">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="939" height="191" key="GridCell.Tab.0.center/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598947878807" />
-    <state width="939" height="191" key="GridCell.Tab.0.left" timestamp="1598947878807">
+    <state width="939" height="271" key="GridCell.Tab.0.center/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598951697407" />
+    <state width="939" height="271" key="GridCell.Tab.0.left" timestamp="1598951697397">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="939" height="191" key="GridCell.Tab.0.left/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598947878807" />
-    <state width="939" height="191" key="GridCell.Tab.0.right" timestamp="1598947878808">
+    <state width="939" height="271" key="GridCell.Tab.0.left/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598951697397" />
+    <state width="939" height="271" key="GridCell.Tab.0.right" timestamp="1598951697407">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="939" height="191" key="GridCell.Tab.0.right/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598947878808" />
+    <state width="939" height="271" key="GridCell.Tab.0.right/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598951697407" />
     <state x="0" y="190" key="SettingsEditor" timestamp="1598937370946">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
@@ -175,10 +175,10 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="80" y="287" key="Vcs.Push.Dialog.v2/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598945543585" />
-    <state x="157" y="290" width="645" height="522" key="find.popup" timestamp="1598948093996">
+    <state x="157" y="290" width="645" height="522" key="find.popup" timestamp="1598951170498">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="157" y="290" width="645" height="522" key="find.popup/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598948093996" />
+    <state x="157" y="290" width="645" height="522" key="find.popup/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598951170498" />
     <state x="276" y="442" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1598926372899">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>

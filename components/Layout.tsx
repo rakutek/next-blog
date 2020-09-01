@@ -20,6 +20,17 @@ const HeaderWrapper = styled.header`
     
 `
 
+const Wrapper = styled.div`
+              margin: 0 auto;
+              text-align: center;
+`
+
+const Main = styled.div`
+              text-align: left;
+              
+              display: inline-block;
+`
+
 
 const Layout = ({children, title = 'This is the default title'}: Props) => (
     <div>
@@ -35,29 +46,15 @@ const Layout = ({children, title = 'This is the default title'}: Props) => (
         </HeaderWrapper>
 
 
-        <div className={"wrapper"}>
-            <div className={"main"}>
+        <Wrapper>
+            <Main>
                 {children}
-            </div>
+            </Main>
 
-        </div>
+        </Wrapper>
 
         <footer>
         </footer>
-
-        <style jsx>{`
-            .wrapper {
-              margin: 0 auto;
-              text-align: center;
-            }
-            
-            .main {
-              text-align: left;
-              
- display: inline-block;
-            }
-        `}</style>
-
 
     </div>
 
