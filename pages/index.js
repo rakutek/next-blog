@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Layout from "../components/Layout";
-import Date from "../components/date";
 import { getSortedPostsData } from "../lib/posts";
 import styled from "styled-components";
 
@@ -31,9 +30,7 @@ const IndexPage = ({ allPostsData }) => (
 
                 <br />
 
-                <Light>
-                    <Date dateString={date} />
-                </Light>
+                <Light>{date}</Light>
             </List>
         ))}
     </Layout>
