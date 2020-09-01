@@ -16,7 +16,7 @@ const HeadingXl = styled.h1`
 const Article = styled.article`
     max-width: 48rem;
 
-    ${media.lessThan("medium")`
+    ${media.lessThan("small")`
        word-break: break-all;
 `}
 `;

@@ -22,7 +22,7 @@ const HeaderWrapper = styled.header`
     height: 0;
     padding-bottom: 70px;
 
-    ${media.lessThan("medium")`
+    ${media.lessThan("small")`
         max-width: 23rem;
         padding-left:9px;
         padding-right:9px

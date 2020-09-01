@@ -23,6 +23,7 @@ const IndexPage = ({ allPostsData }) => (
         {allPostsData.map(({ id, date, title }) => (
             <List>
                 <Link href="/[id]" as={`/${id}`}>
+                    {/*<Link href="/posts/[id]" as={`/posts/${id}`}>*/}
                     <Title>
                         <a>{title}</a>
                     </Title>
