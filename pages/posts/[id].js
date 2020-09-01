@@ -14,7 +14,7 @@ const HeadingXl = styled.h1`
 `;
 
 const Article = styled.article`
-    max-width: 39rem;
+    max-width: 48rem;
 `;
 
 export default function Post({ postData }) {

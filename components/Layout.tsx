@@ -11,9 +11,6 @@ type Props = {
 const HeaderWrapper = styled.header`
     text-align: center;
     h1 {
-        //padding-left: 190px;
-        //text-align: left;
-
         display: inline-block;
         font-size: 32px;
     }
