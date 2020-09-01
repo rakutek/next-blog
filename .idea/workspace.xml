@@ -10,12 +10,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e230f13-38d7-4443-80ef-0e851c21bbc1" name="デフォルト変更リスト" comment="ダーミー記事消した">
+    <list default="true" id="3e230f13-38d7-4443-80ef-0e851c21bbc1" name="デフォルト変更リスト" comment="styled-componentsに移行した">
+      <change afterPath="$PROJECT_DIR$/posts/nebou-zoom.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/global.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/utils.module.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/posts/[id].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/[id].js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts/pre-rendering.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/posts/ssg-ssr.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +51,9 @@
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pages" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/posts" />
       <recent name="$PROJECT_DIR$" />
@@ -117,7 +121,7 @@
       <updated>1598926314556</updated>
       <workItem from="1598926315761" duration="107000" />
       <workItem from="1598926439798" duration="14804000" />
-      <workItem from="1598952934408" duration="1917000" />
+      <workItem from="1598952934408" duration="2244000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1598935563860</created>
@@ -154,7 +158,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598952084555</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="styled-componentsに移行した">
+      <created>1598954890314</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1598954890314</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,7 +199,8 @@
     <MESSAGE value="prettier2" />
     <MESSAGE value="prettierしてなかった" />
     <MESSAGE value="ダーミー記事消した" />
-    <option name="LAST_COMMIT_MESSAGE" value="ダーミー記事消した" />
+    <MESSAGE value="styled-componentsに移行した" />
+    <option name="LAST_COMMIT_MESSAGE" value="styled-componentsに移行した" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -209,22 +221,22 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="121" y="336" key="EditFileWatcherDialog/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598952209632" />
-    <state width="1255" height="206" key="GridCell.Tab.0.bottom" timestamp="1598954799001">
+    <state width="1255" height="206" key="GridCell.Tab.0.bottom" timestamp="1598954858133">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1255" height="206" key="GridCell.Tab.0.bottom/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598954799001" />
-    <state width="1255" height="206" key="GridCell.Tab.0.center" timestamp="1598954799000">
+    <state width="1255" height="206" key="GridCell.Tab.0.bottom/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598954858133" />
+    <state width="1255" height="206" key="GridCell.Tab.0.center" timestamp="1598954858132">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1255" height="206" key="GridCell.Tab.0.center/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598954799000" />
-    <state width="1255" height="206" key="GridCell.Tab.0.left" timestamp="1598954799000">
+    <state width="1255" height="206" key="GridCell.Tab.0.center/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598954858132" />
+    <state width="1255" height="206" key="GridCell.Tab.0.left" timestamp="1598954858129">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1255" height="206" key="GridCell.Tab.0.left/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598954799000" />
-    <state width="1255" height="206" key="GridCell.Tab.0.right" timestamp="1598954799000">
+    <state width="1255" height="206" key="GridCell.Tab.0.left/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598954858129" />
+    <state width="1255" height="206" key="GridCell.Tab.0.right" timestamp="1598954858133">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1255" height="206" key="GridCell.Tab.0.right/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598954799000" />
+    <state width="1255" height="206" key="GridCell.Tab.0.right/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598954858133" />
     <state x="774" y="118" key="RollbackChangesDialog" timestamp="1598954403576">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
@@ -233,10 +245,10 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="25" y="23" key="SettingsEditor/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598952499758" />
-    <state x="80" y="287" key="Vcs.Push.Dialog.v2" timestamp="1598953827319">
+    <state x="80" y="287" key="Vcs.Push.Dialog.v2" timestamp="1598954899031">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="80" y="287" key="Vcs.Push.Dialog.v2/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598953827319" />
+    <state x="80" y="287" key="Vcs.Push.Dialog.v2/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598954899031" />
     <state x="157" y="290" width="645" height="522" key="find.popup" timestamp="1598954107550">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
