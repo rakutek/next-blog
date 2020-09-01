@@ -1,7 +1,6 @@
 import Layout from "../components/Layout";
 import { getAllPostIds, getPostData } from "../lib/posts";
 import Head from "next/head";
-import Date from "../components/date";
 
 import styled from "styled-components";
 
@@ -26,9 +25,7 @@ export default function Post({ postData }) {
             <Article>
                 <HeadingXl>{postData.title}</HeadingXl>
 
-                <div>
-                    <Date dateString={postData.date} />
-                </div>
+                <div>{postData.date}</div>
                 <div
                     dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
                 />
