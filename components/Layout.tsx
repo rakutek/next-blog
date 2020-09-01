@@ -60,7 +60,7 @@ const Body = styled.body`
 `;
 
 const Footer = styled.footer`
-    background-color: #252f3f;
+    background-color: #8b5def;
 
     width: 100%;
     height: 40px;
