@@ -12,7 +12,7 @@ const HeaderWrapper = styled.header`
     text-align: center;
     h1 {
         display: inline-block;
-        font-size: 32px;
+        font-size: 38px;
     }
 
     height: 0;
@@ -32,8 +32,26 @@ const Main = styled.div`
     padding-top: 60px;
 `;
 
+const Body = styled.body`
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+        Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    line-height: 1.6;
+    font-size: 18px;
+
+    a {
+        color: #0070f3;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+`;
+
 const Layout = ({ children, title = "This is the default title" }: Props) => (
-    <div>
+    <Body>
         <Head>
             <title>{title}</title>
             <meta charSet="utf-8" />
@@ -52,7 +70,7 @@ const Layout = ({ children, title = "This is the default title" }: Props) => (
         <Wrapper>
             <Main>{children}</Main>
         </Wrapper>
-    </div>
+    </Body>
 );
 
 export default Layout;

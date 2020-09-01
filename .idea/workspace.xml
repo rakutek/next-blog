@@ -10,42 +10,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e230f13-38d7-4443-80ef-0e851c21bbc1" name="デフォルト変更リスト" comment="prettierしてなかった">
+    <list default="true" id="3e230f13-38d7-4443-80ef-0e851c21bbc1" name="デフォルト変更リスト" comment="ダーミー記事消した">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/posts/[id].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/posts/[id].js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/pre-rendering.md" beforeDir="false" afterPath="$PROJECT_DIR$/posts/pre-rendering.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/pre-renderingのコピー.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/pre-renderingのコピー10.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/pre-renderingのコピー11.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/pre-renderingのコピー12.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/pre-renderingのコピー13.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/pre-renderingのコピー14.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/pre-renderingのコピー15.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/pre-renderingのコピー2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/pre-renderingのコピー3.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/pre-renderingのコピー4.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/pre-renderingのコピー5.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/pre-renderingのコピー6.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/pre-renderingのコピー7.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/pre-renderingのコピー8.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/pre-renderingのコピー9.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/ssg-ssrのコピー.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/ssg-ssrのコピー10.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/ssg-ssrのコピー11.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/ssg-ssrのコピー12.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/ssg-ssrのコピー13.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/ssg-ssrのコピー14.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/ssg-ssrのコピー15.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/ssg-ssrのコピー2.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/ssg-ssrのコピー3.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/ssg-ssrのコピー4.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/ssg-ssrのコピー5.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/ssg-ssrのコピー6.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/ssg-ssrのコピー7.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/ssg-ssrのコピー8.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/ssg-ssrのコピー9.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/global.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/utils.module.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,7 +117,7 @@
       <updated>1598926314556</updated>
       <workItem from="1598926315761" duration="107000" />
       <workItem from="1598926439798" duration="14804000" />
-      <workItem from="1598952934408" duration="1385000" />
+      <workItem from="1598952934408" duration="1917000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1598935563860</created>
@@ -217,39 +187,48 @@
     <MESSAGE value="prettier" />
     <MESSAGE value="prettier2" />
     <MESSAGE value="prettierしてなかった" />
-    <option name="LAST_COMMIT_MESSAGE" value="prettierしてなかった" />
+    <MESSAGE value="ダーミー記事消した" />
+    <option name="LAST_COMMIT_MESSAGE" value="ダーミー記事消した" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="376" y="306" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598954798636">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="376" y="306" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598954798636" />
     <state x="508" y="68" width="948" height="929" key="CommitChangelistDialog2" timestamp="1598952714465">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="508" y="68" width="948" height="929" key="CommitChangelistDialog2/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598952714465" />
-    <state x="100" y="123" width="760" height="857" key="DiffContextDialog" timestamp="1598952927777">
+    <state x="607" y="207" width="760" height="857" key="DiffContextDialog" timestamp="1598954461771">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="100" y="123" width="760" height="857" key="DiffContextDialog/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598952927777" />
+    <state x="607" y="207" width="760" height="857" key="DiffContextDialog/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598954461771" />
     <state x="121" y="336" key="EditFileWatcherDialog" timestamp="1598952209632">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="121" y="336" key="EditFileWatcherDialog/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598952209632" />
-    <state width="1255" height="206" key="GridCell.Tab.0.bottom" timestamp="1598953743460">
+    <state width="1255" height="206" key="GridCell.Tab.0.bottom" timestamp="1598954799001">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1255" height="206" key="GridCell.Tab.0.bottom/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598953743460" />
-    <state width="1255" height="206" key="GridCell.Tab.0.center" timestamp="1598953743459">
+    <state width="1255" height="206" key="GridCell.Tab.0.bottom/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598954799001" />
+    <state width="1255" height="206" key="GridCell.Tab.0.center" timestamp="1598954799000">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1255" height="206" key="GridCell.Tab.0.center/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598953743459" />
-    <state width="1255" height="206" key="GridCell.Tab.0.left" timestamp="1598953743459">
+    <state width="1255" height="206" key="GridCell.Tab.0.center/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598954799000" />
+    <state width="1255" height="206" key="GridCell.Tab.0.left" timestamp="1598954799000">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1255" height="206" key="GridCell.Tab.0.left/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598953743459" />
-    <state width="1255" height="206" key="GridCell.Tab.0.right" timestamp="1598953743460">
+    <state width="1255" height="206" key="GridCell.Tab.0.left/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598954799000" />
+    <state width="1255" height="206" key="GridCell.Tab.0.right" timestamp="1598954799000">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1255" height="206" key="GridCell.Tab.0.right/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598953743460" />
+    <state width="1255" height="206" key="GridCell.Tab.0.right/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598954799000" />
+    <state x="774" y="118" key="RollbackChangesDialog" timestamp="1598954403576">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="774" y="118" key="RollbackChangesDialog/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598954403576" />
     <state x="25" y="23" key="SettingsEditor" timestamp="1598952499758">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
