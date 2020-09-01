@@ -24,15 +24,9 @@ const Title = styled.a`
 
 const IndexPage = ({allPostsData}) => (
     <Layout title="Home | Next.js + TypeScript Example">
-        <h1>Hello Next.js 👋</h1>
-        <p>
-            <Link href="/">
-                <a>About</a>
-            </Link>
-        </p>
 
 
-        <h1>Blog</h1>
+    <h1>Blog</h1>
         {allPostsData.map(({id, date, title}) => (
             <List>
                 <Link href="/posts/[id]" as={`/posts/${id}`}>

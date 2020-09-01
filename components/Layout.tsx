@@ -15,7 +15,7 @@ const HeaderWrapper = styled.header`
     font-size: 32px;
     }
     
-    height: 0px;
+    height: 0;
     padding-bottom: 70px;
     
 `
@@ -42,7 +42,10 @@ const Layout = ({children, title = 'This is the default title'}: Props) => (
 
         <HeaderWrapper>
             <h1>rakutek.dev🧑‍💻</h1>
+
             <hr/>
+
+
         </HeaderWrapper>
 
 
