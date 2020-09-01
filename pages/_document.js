@@ -33,7 +33,8 @@ export default class extends Document {
                         sizes="180x180"
                         href="../../public/icons/apple-touch-icon.png"
                     />
-                    <link rel="manifest" href="../../public/manifest.json" />
+                    {/*<link rel="manifest" href="../../public/manifest.json" />*/}
+                    <link rel="manifest" href="/manifest.json" />
                     <link
                         rel="shortcut icon"
                         href="../../public/icons/favicon.ico"

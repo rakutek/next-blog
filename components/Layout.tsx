@@ -71,7 +71,7 @@ const Layout = ({ children, title = "rakutek.dev" }: Props) => (
         </Head>
 
         <HeaderWrapper>
-            <Link href="/" passHref>
+            <Link href="/" as={""}>
                 <a>rakutek.dev🧑‍💻</a>
             </Link>
 

@@ -10,10 +10,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e230f13-38d7-4443-80ef-0e851c21bbc1" name="デフォルト変更リスト" comment="レスポンシブ対応">
+    <list default="true" id="3e230f13-38d7-4443-80ef-0e851c21bbc1" name="デフォルト変更リスト" comment="タイトルをリンクに">
       <change beforePath="$PROJECT_DIR$/.firebase/hosting.b3V0.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.b3V0.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_document.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_document.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/sw.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/sw.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/sw.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/sw.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/workbox-8c6a447f.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/workbox-8c6a447f.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/workbox-8c6a447f.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/workbox-8c6a447f.js.map" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +136,7 @@
       <updated>1598926314556</updated>
       <workItem from="1598926315761" duration="107000" />
       <workItem from="1598926439798" duration="14804000" />
-      <workItem from="1598952934408" duration="8852000" />
+      <workItem from="1598952934408" duration="10125000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1598935563860</created>
@@ -201,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598961018214</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="タイトルをリンクに">
+      <created>1598961863803</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1598961863803</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,7 +255,8 @@
     <MESSAGE value="タイトル変更" />
     <MESSAGE value="data-fns使うのやめた" />
     <MESSAGE value="レスポンシブ対応" />
-    <option name="LAST_COMMIT_MESSAGE" value="レスポンシブ対応" />
+    <MESSAGE value="タイトルをリンクに" />
+    <option name="LAST_COMMIT_MESSAGE" value="タイトルをリンクに" />
   </component>
   <component name="WindowStateProjectService">
     <state x="376" y="306" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598957590120">
@@ -260,22 +275,22 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="121" y="336" key="EditFileWatcherDialog/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598952209632" />
-    <state width="1255" height="206" key="GridCell.Tab.0.bottom" timestamp="1598961260663">
+    <state width="1255" height="206" key="GridCell.Tab.0.bottom" timestamp="1598963044691">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1255" height="206" key="GridCell.Tab.0.bottom/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598961260663" />
-    <state width="1255" height="206" key="GridCell.Tab.0.center" timestamp="1598961260662">
+    <state width="1255" height="206" key="GridCell.Tab.0.bottom/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598963044691" />
+    <state width="1255" height="206" key="GridCell.Tab.0.center" timestamp="1598963044690">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1255" height="206" key="GridCell.Tab.0.center/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598961260662" />
-    <state width="1255" height="206" key="GridCell.Tab.0.left" timestamp="1598961260660">
+    <state width="1255" height="206" key="GridCell.Tab.0.center/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598963044690" />
+    <state width="1255" height="206" key="GridCell.Tab.0.left" timestamp="1598963044690">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1255" height="206" key="GridCell.Tab.0.left/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598961260660" />
-    <state width="1255" height="206" key="GridCell.Tab.0.right" timestamp="1598961260663">
+    <state width="1255" height="206" key="GridCell.Tab.0.left/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598963044690" />
+    <state width="1255" height="206" key="GridCell.Tab.0.right" timestamp="1598963044691">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1255" height="206" key="GridCell.Tab.0.right/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598961260663" />
+    <state width="1255" height="206" key="GridCell.Tab.0.right/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598963044691" />
     <state width="1255" height="331" key="GridCell.Tab.1.bottom" timestamp="1598957226356">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
