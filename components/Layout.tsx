@@ -64,8 +64,16 @@ const Footer = styled.footer`
 
     width: 100%;
     height: 40px;
-    position: absolute; /*←絶対位置*/
+
     bottom: 0; /*下に固定*/
+
+    margin-top: auto;
+`;
+
+const Flex = styled.div`
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 `;
 
 const Layout = ({ children, title = "rakutek.dev" }: Props) => (
@@ -88,11 +96,13 @@ const Layout = ({ children, title = "rakutek.dev" }: Props) => (
                 <hr />
             </HeaderWrapper>
 
-            <Wrapper>
-                <Main>{children}</Main>
-            </Wrapper>
+            <Flex>
+                <Wrapper>
+                    <Main>{children}</Main>
+                </Wrapper>
 
-            <Footer>.</Footer>
+                <Footer>.</Footer>
+            </Flex>
         </Body>
     </>
 );
