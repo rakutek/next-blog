@@ -9,6 +9,16 @@ import styled from "styled-components";
 
 const Light = styled.small`
  color: #666;
+ 
+`
+const List = styled.li`
+  list-style: none;
+  margin: 0;
+  padding-bottom: 7px;
+`
+
+const Title = styled.a`
+  font-size: 24px;
 `
 
 
@@ -22,17 +32,19 @@ const IndexPage = ({allPostsData}) => (
         </p>
 
 
+        <h1>Blog</h1>
         {allPostsData.map(({id, date, title}) => (
-            <li>
+            <List>
                 <Link href="/posts/[id]" as={`/posts/${id}`}>
-                    <a>{title}</a>
+                    <Title><a>{title}</a></Title>
                 </Link>
                 <br/>
+
                 <Light>
                     <Date dateString={date}/>
                 </Light>
 
-            </li>
+            </List>
         ))}
 
 

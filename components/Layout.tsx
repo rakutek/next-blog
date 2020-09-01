@@ -1,10 +1,25 @@
 import React, {ReactNode} from 'react'
 import Head from 'next/head'
 
+import styled from "styled-components";
+
+
 type Props = {
     children?: ReactNode
     title?: string
 }
+
+const HeaderWrapper = styled.header`
+    h1 {
+    padding-left:190px;
+    font-size: 32px;
+    }
+    
+    height: 0px;
+    padding-bottom: 70px;
+    
+`
+
 
 const Layout = ({children, title = 'This is the default title'}: Props) => (
     <div>
@@ -14,9 +29,11 @@ const Layout = ({children, title = 'This is the default title'}: Props) => (
             <meta name="viewport" content="initial-scale=1.0, width=device-width"/>
         </Head>
 
-        <header>
-            <p>rakutek.dev</p>
-        </header>
+        <HeaderWrapper>
+            <h1>rakutek.dev🧑‍💻</h1>
+            <hr/>
+        </HeaderWrapper>
+
 
         <div className={"wrapper"}>
             <div className={"main"}>
@@ -26,7 +43,6 @@ const Layout = ({children, title = 'This is the default title'}: Props) => (
         </div>
 
         <footer>
-            <p>footer</p>
         </footer>
 
         <style jsx>{`
