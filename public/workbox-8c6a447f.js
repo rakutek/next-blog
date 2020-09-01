@@ -1,10 +1,9 @@
-define("./workbox-8c6a447f.js", ['exports'], function (exports) {
-    'use strict';
+define("./workbox-8c6a447f.js", ["exports"], function (exports) {
+    "use strict";
 
     try {
-        self['workbox:core:5.1.3'] && _();
-    } catch (e) {
-    }
+        self["workbox:core:5.1.3"] && _();
+    } catch (e) {}
 
     /*
       Copyright 2019 Google LLC
@@ -13,9 +12,10 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
       https://opensource.org/licenses/MIT.
     */
     const logger = (() => {
-        // Don't overwrite this value if it's already set.
+        // Don't overwrite this value if it's alr
+        // eady set.
         // See https://github.com/GoogleChrome/workbox/pull/2284#issuecomment-560470923
-        if (!('__WB_DISABLE_DEV_LOGS' in self)) {
+        if (!("__WB_DISABLE_DEV_LOGS" in self)) {
             self.__WB_DISABLE_DEV_LOGS = false;
         }
 
@@ -26,7 +26,7 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
             warn: `#f39c12`,
             error: `#c0392b`,
             groupCollapsed: `#3498db`,
-            groupEnd: null
+            groupEnd: null,
         };
 
         const print = function (method, args) {
@@ -34,25 +34,33 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
                 return;
             }
 
-            if (method === 'groupCollapsed') {
+            if (method === "groupCollapsed") {
                 // Safari doesn't print all console.groupCollapsed() arguments:
                 // https://bugs.webkit.org/show_bug.cgi?id=182754
-                if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+                if (
+                    /^((?!chrome|android).)*safari/i.test(navigator.userAgent)
+                ) {
                     console[method](...args);
                     return;
                 }
             }
 
-            const styles = [`background: ${methodToColorMap[method]}`, `border-radius: 0.5em`, `color: white`, `font-weight: bold`, `padding: 2px 0.5em`]; // When in a group, the workbox prefix is not displayed.
+            const styles = [
+                `background: ${methodToColorMap[method]}`,
+                `border-radius: 0.5em`,
+                `color: white`,
+                `font-weight: bold`,
+                `padding: 2px 0.5em`,
+            ]; // When in a group, the workbox prefix is not displayed.
 
-            const logPrefix = inGroup ? [] : ['%cworkbox', styles.join(';')];
+            const logPrefix = inGroup ? [] : ["%cworkbox", styles.join(";")];
             console[method](...logPrefix, ...args);
 
-            if (method === 'groupCollapsed') {
+            if (method === "groupCollapsed") {
                 inGroup = true;
             }
 
-            if (method === 'groupEnd') {
+            if (method === "groupEnd") {
                 inGroup = false;
             }
         };
@@ -79,239 +87,327 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
       https://opensource.org/licenses/MIT.
     */
     const messages = {
-        'invalid-value': ({
-                              paramName,
-                              validValueDescription,
-                              value
-                          }) => {
+        "invalid-value": ({ paramName, validValueDescription, value }) => {
             if (!paramName || !validValueDescription) {
                 throw new Error(`Unexpected input to 'invalid-value' error.`);
             }
 
-            return `The '${paramName}' parameter was given a value with an ` + `unexpected value. ${validValueDescription} Received a value of ` + `${JSON.stringify(value)}.`;
+            return (
+                `The '${paramName}' parameter was given a value with an ` +
+                `unexpected value. ${validValueDescription} Received a value of ` +
+                `${JSON.stringify(value)}.`
+            );
         },
-        'not-an-array': ({
-                             moduleName,
-                             className,
-                             funcName,
-                             paramName
-                         }) => {
+        "not-an-array": ({ moduleName, className, funcName, paramName }) => {
             if (!moduleName || !className || !funcName || !paramName) {
                 throw new Error(`Unexpected input to 'not-an-array' error.`);
             }
 
-            return `The parameter '${paramName}' passed into ` + `'${moduleName}.${className}.${funcName}()' must be an array.`;
+            return (
+                `The parameter '${paramName}' passed into ` +
+                `'${moduleName}.${className}.${funcName}()' must be an array.`
+            );
         },
-        'incorrect-type': ({
-                               expectedType,
-                               paramName,
-                               moduleName,
-                               className,
-                               funcName
-                           }) => {
+        "incorrect-type": ({
+            expectedType,
+            paramName,
+            moduleName,
+            className,
+            funcName,
+        }) => {
             if (!expectedType || !paramName || !moduleName || !funcName) {
                 throw new Error(`Unexpected input to 'incorrect-type' error.`);
             }
 
-            return `The parameter '${paramName}' passed into ` + `'${moduleName}.${className ? className + '.' : ''}` + `${funcName}()' must be of type ${expectedType}.`;
+            return (
+                `The parameter '${paramName}' passed into ` +
+                `'${moduleName}.${className ? className + "." : ""}` +
+                `${funcName}()' must be of type ${expectedType}.`
+            );
         },
-        'incorrect-class': ({
-                                expectedClass,
-                                paramName,
-                                moduleName,
-                                className,
-                                funcName,
-                                isReturnValueProblem
-                            }) => {
+        "incorrect-class": ({
+            expectedClass,
+            paramName,
+            moduleName,
+            className,
+            funcName,
+            isReturnValueProblem,
+        }) => {
             if (!expectedClass || !moduleName || !funcName) {
                 throw new Error(`Unexpected input to 'incorrect-class' error.`);
             }
 
             if (isReturnValueProblem) {
-                return `The return value from ` + `'${moduleName}.${className ? className + '.' : ''}${funcName}()' ` + `must be an instance of class ${expectedClass.name}.`;
+                return (
+                    `The return value from ` +
+                    `'${moduleName}.${
+                        className ? className + "." : ""
+                    }${funcName}()' ` +
+                    `must be an instance of class ${expectedClass.name}.`
+                );
             }
 
-            return `The parameter '${paramName}' passed into ` + `'${moduleName}.${className ? className + '.' : ''}${funcName}()' ` + `must be an instance of class ${expectedClass.name}.`;
+            return (
+                `The parameter '${paramName}' passed into ` +
+                `'${moduleName}.${
+                    className ? className + "." : ""
+                }${funcName}()' ` +
+                `must be an instance of class ${expectedClass.name}.`
+            );
         },
-        'missing-a-method': ({
-                                 expectedMethod,
-                                 paramName,
-                                 moduleName,
-                                 className,
-                                 funcName
-                             }) => {
-            if (!expectedMethod || !paramName || !moduleName || !className || !funcName) {
-                throw new Error(`Unexpected input to 'missing-a-method' error.`);
+        "missing-a-method": ({
+            expectedMethod,
+            paramName,
+            moduleName,
+            className,
+            funcName,
+        }) => {
+            if (
+                !expectedMethod ||
+                !paramName ||
+                !moduleName ||
+                !className ||
+                !funcName
+            ) {
+                throw new Error(
+                    `Unexpected input to 'missing-a-method' error.`
+                );
             }
 
-            return `${moduleName}.${className}.${funcName}() expected the ` + `'${paramName}' parameter to expose a '${expectedMethod}' method.`;
+            return (
+                `${moduleName}.${className}.${funcName}() expected the ` +
+                `'${paramName}' parameter to expose a '${expectedMethod}' method.`
+            );
         },
-        'add-to-cache-list-unexpected-type': ({
-                                                  entry
-                                              }) => {
-            return `An unexpected entry was passed to ` + `'workbox-precaching.PrecacheController.addToCacheList()' The entry ` + `'${JSON.stringify(entry)}' isn't supported. You must supply an array of ` + `strings with one or more characters, objects with a url property or ` + `Request objects.`;
+        "add-to-cache-list-unexpected-type": ({ entry }) => {
+            return (
+                `An unexpected entry was passed to ` +
+                `'workbox-precaching.PrecacheController.addToCacheList()' The entry ` +
+                `'${JSON.stringify(
+                    entry
+                )}' isn't supported. You must supply an array of ` +
+                `strings with one or more characters, objects with a url property or ` +
+                `Request objects.`
+            );
         },
-        'add-to-cache-list-conflicting-entries': ({
-                                                      firstEntry,
-                                                      secondEntry
-                                                  }) => {
+        "add-to-cache-list-conflicting-entries": ({
+            firstEntry,
+            secondEntry,
+        }) => {
             if (!firstEntry || !secondEntry) {
-                throw new Error(`Unexpected input to ` + `'add-to-cache-list-duplicate-entries' error.`);
+                throw new Error(
+                    `Unexpected input to ` +
+                        `'add-to-cache-list-duplicate-entries' error.`
+                );
             }
 
-            return `Two of the entries passed to ` + `'workbox-precaching.PrecacheController.addToCacheList()' had the URL ` + `${firstEntry._entryId} but different revision details. Workbox is ` + `unable to cache and version the asset correctly. Please remove one ` + `of the entries.`;
+            return (
+                `Two of the entries passed to ` +
+                `'workbox-precaching.PrecacheController.addToCacheList()' had the URL ` +
+                `${firstEntry._entryId} but different revision details. Workbox is ` +
+                `unable to cache and version the asset correctly. Please remove one ` +
+                `of the entries.`
+            );
         },
-        'plugin-error-request-will-fetch': ({
-                                                thrownError
-                                            }) => {
+        "plugin-error-request-will-fetch": ({ thrownError }) => {
             if (!thrownError) {
-                throw new Error(`Unexpected input to ` + `'plugin-error-request-will-fetch', error.`);
+                throw new Error(
+                    `Unexpected input to ` +
+                        `'plugin-error-request-will-fetch', error.`
+                );
             }
 
-            return `An error was thrown by a plugins 'requestWillFetch()' method. ` + `The thrown error message was: '${thrownError.message}'.`;
+            return (
+                `An error was thrown by a plugins 'requestWillFetch()' method. ` +
+                `The thrown error message was: '${thrownError.message}'.`
+            );
         },
-        'invalid-cache-name': ({
-                                   cacheNameId,
-                                   value
-                               }) => {
+        "invalid-cache-name": ({ cacheNameId, value }) => {
             if (!cacheNameId) {
-                throw new Error(`Expected a 'cacheNameId' for error 'invalid-cache-name'`);
+                throw new Error(
+                    `Expected a 'cacheNameId' for error 'invalid-cache-name'`
+                );
             }
 
-            return `You must provide a name containing at least one character for ` + `setCacheDetails({${cacheNameId}: '...'}). Received a value of ` + `'${JSON.stringify(value)}'`;
+            return (
+                `You must provide a name containing at least one character for ` +
+                `setCacheDetails({${cacheNameId}: '...'}). Received a value of ` +
+                `'${JSON.stringify(value)}'`
+            );
         },
-        'unregister-route-but-not-found-with-method': ({
-                                                           method
-                                                       }) => {
+        "unregister-route-but-not-found-with-method": ({ method }) => {
             if (!method) {
-                throw new Error(`Unexpected input to ` + `'unregister-route-but-not-found-with-method' error.`);
+                throw new Error(
+                    `Unexpected input to ` +
+                        `'unregister-route-but-not-found-with-method' error.`
+                );
             }
 
-            return `The route you're trying to unregister was not  previously ` + `registered for the method type '${method}'.`;
+            return (
+                `The route you're trying to unregister was not  previously ` +
+                `registered for the method type '${method}'.`
+            );
         },
-        'unregister-route-route-not-registered': () => {
-            return `The route you're trying to unregister was not previously ` + `registered.`;
+        "unregister-route-route-not-registered": () => {
+            return (
+                `The route you're trying to unregister was not previously ` +
+                `registered.`
+            );
         },
-        'queue-replay-failed': ({
-                                    name
-                                }) => {
+        "queue-replay-failed": ({ name }) => {
             return `Replaying the background sync queue '${name}' failed.`;
         },
-        'duplicate-queue-name': ({
-                                     name
-                                 }) => {
-            return `The Queue name '${name}' is already being used. ` + `All instances of backgroundSync.Queue must be given unique names.`;
+        "duplicate-queue-name": ({ name }) => {
+            return (
+                `The Queue name '${name}' is already being used. ` +
+                `All instances of backgroundSync.Queue must be given unique names.`
+            );
         },
-        'expired-test-without-max-age': ({
-                                             methodName,
-                                             paramName
-                                         }) => {
-            return `The '${methodName}()' method can only be used when the ` + `'${paramName}' is used in the constructor.`;
+        "expired-test-without-max-age": ({ methodName, paramName }) => {
+            return (
+                `The '${methodName}()' method can only be used when the ` +
+                `'${paramName}' is used in the constructor.`
+            );
         },
-        'unsupported-route-type': ({
-                                       moduleName,
-                                       className,
-                                       funcName,
-                                       paramName
-                                   }) => {
-            return `The supplied '${paramName}' parameter was an unsupported type. ` + `Please check the docs for ${moduleName}.${className}.${funcName} for ` + `valid input types.`;
+        "unsupported-route-type": ({
+            moduleName,
+            className,
+            funcName,
+            paramName,
+        }) => {
+            return (
+                `The supplied '${paramName}' parameter was an unsupported type. ` +
+                `Please check the docs for ${moduleName}.${className}.${funcName} for ` +
+                `valid input types.`
+            );
         },
-        'not-array-of-class': ({
-                                   value,
-                                   expectedClass,
-                                   moduleName,
-                                   className,
-                                   funcName,
-                                   paramName
-                               }) => {
-            return `The supplied '${paramName}' parameter must be an array of ` + `'${expectedClass}' objects. Received '${JSON.stringify(value)},'. ` + `Please check the call to ${moduleName}.${className}.${funcName}() ` + `to fix the issue.`;
+        "not-array-of-class": ({
+            value,
+            expectedClass,
+            moduleName,
+            className,
+            funcName,
+            paramName,
+        }) => {
+            return (
+                `The supplied '${paramName}' parameter must be an array of ` +
+                `'${expectedClass}' objects. Received '${JSON.stringify(
+                    value
+                )},'. ` +
+                `Please check the call to ${moduleName}.${className}.${funcName}() ` +
+                `to fix the issue.`
+            );
         },
-        'max-entries-or-age-required': ({
-                                            moduleName,
-                                            className,
-                                            funcName
-                                        }) => {
-            return `You must define either config.maxEntries or config.maxAgeSeconds` + `in ${moduleName}.${className}.${funcName}`;
+        "max-entries-or-age-required": ({
+            moduleName,
+            className,
+            funcName,
+        }) => {
+            return (
+                `You must define either config.maxEntries or config.maxAgeSeconds` +
+                `in ${moduleName}.${className}.${funcName}`
+            );
         },
-        'statuses-or-headers-required': ({
-                                             moduleName,
-                                             className,
-                                             funcName
-                                         }) => {
-            return `You must define either config.statuses or config.headers` + `in ${moduleName}.${className}.${funcName}`;
+        "statuses-or-headers-required": ({
+            moduleName,
+            className,
+            funcName,
+        }) => {
+            return (
+                `You must define either config.statuses or config.headers` +
+                `in ${moduleName}.${className}.${funcName}`
+            );
         },
-        'invalid-string': ({
-                               moduleName,
-                               funcName,
-                               paramName
-                           }) => {
+        "invalid-string": ({ moduleName, funcName, paramName }) => {
             if (!paramName || !moduleName || !funcName) {
                 throw new Error(`Unexpected input to 'invalid-string' error.`);
             }
 
-            return `When using strings, the '${paramName}' parameter must start with ` + `'http' (for cross-origin matches) or '/' (for same-origin matches). ` + `Please see the docs for ${moduleName}.${funcName}() for ` + `more info.`;
+            return (
+                `When using strings, the '${paramName}' parameter must start with ` +
+                `'http' (for cross-origin matches) or '/' (for same-origin matches). ` +
+                `Please see the docs for ${moduleName}.${funcName}() for ` +
+                `more info.`
+            );
         },
-        'channel-name-required': () => {
-            return `You must provide a channelName to construct a ` + `BroadcastCacheUpdate instance.`;
+        "channel-name-required": () => {
+            return (
+                `You must provide a channelName to construct a ` +
+                `BroadcastCacheUpdate instance.`
+            );
         },
-        'invalid-responses-are-same-args': () => {
-            return `The arguments passed into responsesAreSame() appear to be ` + `invalid. Please ensure valid Responses are used.`;
+        "invalid-responses-are-same-args": () => {
+            return (
+                `The arguments passed into responsesAreSame() appear to be ` +
+                `invalid. Please ensure valid Responses are used.`
+            );
         },
-        'expire-custom-caches-only': () => {
-            return `You must provide a 'cacheName' property when using the ` + `expiration plugin with a runtime caching strategy.`;
+        "expire-custom-caches-only": () => {
+            return (
+                `You must provide a 'cacheName' property when using the ` +
+                `expiration plugin with a runtime caching strategy.`
+            );
         },
-        'unit-must-be-bytes': ({
-                                   normalizedRangeHeader
-                               }) => {
+        "unit-must-be-bytes": ({ normalizedRangeHeader }) => {
             if (!normalizedRangeHeader) {
-                throw new Error(`Unexpected input to 'unit-must-be-bytes' error.`);
+                throw new Error(
+                    `Unexpected input to 'unit-must-be-bytes' error.`
+                );
             }
 
-            return `The 'unit' portion of the Range header must be set to 'bytes'. ` + `The Range header provided was "${normalizedRangeHeader}"`;
+            return (
+                `The 'unit' portion of the Range header must be set to 'bytes'. ` +
+                `The Range header provided was "${normalizedRangeHeader}"`
+            );
         },
-        'single-range-only': ({
-                                  normalizedRangeHeader
-                              }) => {
+        "single-range-only": ({ normalizedRangeHeader }) => {
             if (!normalizedRangeHeader) {
-                throw new Error(`Unexpected input to 'single-range-only' error.`);
+                throw new Error(
+                    `Unexpected input to 'single-range-only' error.`
+                );
             }
 
-            return `Multiple ranges are not supported. Please use a  single start ` + `value, and optional end value. The Range header provided was ` + `"${normalizedRangeHeader}"`;
+            return (
+                `Multiple ranges are not supported. Please use a  single start ` +
+                `value, and optional end value. The Range header provided was ` +
+                `"${normalizedRangeHeader}"`
+            );
         },
-        'invalid-range-values': ({
-                                     normalizedRangeHeader
-                                 }) => {
+        "invalid-range-values": ({ normalizedRangeHeader }) => {
             if (!normalizedRangeHeader) {
-                throw new Error(`Unexpected input to 'invalid-range-values' error.`);
+                throw new Error(
+                    `Unexpected input to 'invalid-range-values' error.`
+                );
             }
 
-            return `The Range header is missing both start and end values. At least ` + `one of those values is needed. The Range header provided was ` + `"${normalizedRangeHeader}"`;
+            return (
+                `The Range header is missing both start and end values. At least ` +
+                `one of those values is needed. The Range header provided was ` +
+                `"${normalizedRangeHeader}"`
+            );
         },
-        'no-range-header': () => {
+        "no-range-header": () => {
             return `No Range header was found in the Request provided.`;
         },
-        'range-not-satisfiable': ({
-                                      size,
-                                      start,
-                                      end
-                                  }) => {
-            return `The start (${start}) and end (${end}) values in the Range are ` + `not satisfiable by the cached response, which is ${size} bytes.`;
+        "range-not-satisfiable": ({ size, start, end }) => {
+            return (
+                `The start (${start}) and end (${end}) values in the Range are ` +
+                `not satisfiable by the cached response, which is ${size} bytes.`
+            );
         },
-        'attempt-to-cache-non-get-request': ({
-                                                 url,
-                                                 method
-                                             }) => {
-            return `Unable to cache '${url}' because it is a '${method}' request and ` + `only 'GET' requests can be cached.`;
+        "attempt-to-cache-non-get-request": ({ url, method }) => {
+            return (
+                `Unable to cache '${url}' because it is a '${method}' request and ` +
+                `only 'GET' requests can be cached.`
+            );
         },
-        'cache-put-with-no-response': ({
-                                           url
-                                       }) => {
-            return `There was an attempt to cache '${url}' but the response was not ` + `defined.`;
+        "cache-put-with-no-response": ({ url }) => {
+            return (
+                `There was an attempt to cache '${url}' but the response was not ` +
+                `defined.`
+            );
         },
-        'no-response': ({
-                            url,
-                            error
-                        }) => {
+        "no-response": ({ url, error }) => {
             let message = `The strategy could not generate a response for '${url}'.`;
 
             if (error) {
@@ -320,28 +416,28 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
 
             return message;
         },
-        'bad-precaching-response': ({
-                                        url,
-                                        status
-                                    }) => {
-            return `The precaching request for '${url}' failed with an HTTP ` + `status of ${status}.`;
+        "bad-precaching-response": ({ url, status }) => {
+            return (
+                `The precaching request for '${url}' failed with an HTTP ` +
+                `status of ${status}.`
+            );
         },
-        'non-precached-url': ({
-                                  url
-                              }) => {
-            return `createHandlerBoundToURL('${url}') was called, but that URL is ` + `not precached. Please pass in a URL that is precached instead.`;
+        "non-precached-url": ({ url }) => {
+            return (
+                `createHandlerBoundToURL('${url}') was called, but that URL is ` +
+                `not precached. Please pass in a URL that is precached instead.`
+            );
         },
-        'add-to-cache-list-conflicting-integrities': ({
-                                                          url
-                                                      }) => {
-            return `Two of the entries passed to ` + `'workbox-precaching.PrecacheController.addToCacheList()' had the URL ` + `${url} with different integrity values. Please remove one of them.`;
+        "add-to-cache-list-conflicting-integrities": ({ url }) => {
+            return (
+                `Two of the entries passed to ` +
+                `'workbox-precaching.PrecacheController.addToCacheList()' had the URL ` +
+                `${url} with different integrity values. Please remove one of them.`
+            );
         },
-        'missing-precache-entry': ({
-                                       cacheName,
-                                       url
-                                   }) => {
+        "missing-precache-entry": ({ cacheName, url }) => {
             return `Unable to find a precached response in ${cacheName} for ${url}.`;
-        }
+        },
     };
 
     /*
@@ -396,7 +492,6 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
             this.name = errorCode;
             this.details = details;
         }
-
     }
 
     /*
@@ -415,42 +510,44 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
 
     const isArray = (value, details) => {
         if (!Array.isArray(value)) {
-            throw new WorkboxError('not-an-array', details);
+            throw new WorkboxError("not-an-array", details);
         }
     };
 
     const hasMethod = (object, expectedMethod, details) => {
         const type = typeof object[expectedMethod];
 
-        if (type !== 'function') {
-            details['expectedMethod'] = expectedMethod;
-            throw new WorkboxError('missing-a-method', details);
+        if (type !== "function") {
+            details["expectedMethod"] = expectedMethod;
+            throw new WorkboxError("missing-a-method", details);
         }
     };
 
     const isType = (object, expectedType, details) => {
         if (typeof object !== expectedType) {
-            details['expectedType'] = expectedType;
-            throw new WorkboxError('incorrect-type', details);
+            details["expectedType"] = expectedType;
+            throw new WorkboxError("incorrect-type", details);
         }
     };
 
     const isInstance = (object, expectedClass, details) => {
         if (!(object instanceof expectedClass)) {
-            details['expectedClass'] = expectedClass;
-            throw new WorkboxError('incorrect-class', details);
+            details["expectedClass"] = expectedClass;
+            throw new WorkboxError("incorrect-class", details);
         }
     };
 
     const isOneOf = (value, validValues, details) => {
         if (!validValues.includes(value)) {
-            details['validValueDescription'] = `Valid values are ${JSON.stringify(validValues)}.`;
-            throw new WorkboxError('invalid-value', details);
+            details[
+                "validValueDescription"
+            ] = `Valid values are ${JSON.stringify(validValues)}.`;
+            throw new WorkboxError("invalid-value", details);
         }
     };
 
     const isArrayOfClass = (value, expectedClass, details) => {
-        const error = new WorkboxError('not-array-of-class', details);
+        const error = new WorkboxError("not-array-of-class", details);
 
         if (!Array.isArray(value)) {
             throw error;
@@ -469,13 +566,12 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
         isInstance,
         isOneOf,
         isType,
-        isArrayOfClass
+        isArrayOfClass,
     };
 
     try {
-        self['workbox:routing:5.1.3'] && _();
-    } catch (e) {
-    }
+        self["workbox:routing:5.1.3"] && _();
+    } catch (e) {}
 
     /*
       Copyright 2018 Google LLC
@@ -493,7 +589,7 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
      * @private
      */
 
-    const defaultMethod = 'GET';
+    const defaultMethod = "GET";
     /**
      * The list of valid HTTP methods associated with requests that could be routed.
      *
@@ -502,7 +598,7 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
      * @private
      */
 
-    const validMethods = ['DELETE', 'GET', 'HEAD', 'PATCH', 'POST', 'PUT'];
+    const validMethods = ["DELETE", "GET", "HEAD", "PATCH", "POST", "PUT"];
 
     /*
       Copyright 2018 Google LLC
@@ -519,30 +615,30 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
      * @private
      */
 
-    const normalizeHandler = handler => {
-        if (handler && typeof handler === 'object') {
+    const normalizeHandler = (handler) => {
+        if (handler && typeof handler === "object") {
             {
-                finalAssertExports.hasMethod(handler, 'handle', {
-                    moduleName: 'workbox-routing',
-                    className: 'Route',
-                    funcName: 'constructor',
-                    paramName: 'handler'
+                finalAssertExports.hasMethod(handler, "handle", {
+                    moduleName: "workbox-routing",
+                    className: "Route",
+                    funcName: "constructor",
+                    paramName: "handler",
                 });
             }
 
             return handler;
         } else {
             {
-                finalAssertExports.isType(handler, 'function', {
-                    moduleName: 'workbox-routing',
-                    className: 'Route',
-                    funcName: 'constructor',
-                    paramName: 'handler'
+                finalAssertExports.isType(handler, "function", {
+                    moduleName: "workbox-routing",
+                    className: "Route",
+                    funcName: "constructor",
+                    paramName: "handler",
                 });
             }
 
             return {
-                handle: handler
+                handle: handler,
             };
         }
     };
@@ -578,27 +674,25 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
          */
         constructor(match, handler, method = defaultMethod) {
             {
-                finalAssertExports.isType(match, 'function', {
-                    moduleName: 'workbox-routing',
-                    className: 'Route',
-                    funcName: 'constructor',
-                    paramName: 'match'
+                finalAssertExports.isType(match, "function", {
+                    moduleName: "workbox-routing",
+                    className: "Route",
+                    funcName: "constructor",
+                    paramName: "match",
                 });
 
                 if (method) {
                     finalAssertExports.isOneOf(method, validMethods, {
-                        paramName: 'method'
+                        paramName: "method",
                     });
                 }
             } // These values are referenced directly by Router so cannot be
             // altered by minificaton.
 
-
             this.handler = normalizeHandler(handler);
             this.match = match;
             this.method = method;
         }
-
     }
 
     /*
@@ -639,16 +733,14 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
         constructor(regExp, handler, method) {
             {
                 finalAssertExports.isInstance(regExp, RegExp, {
-                    moduleName: 'workbox-routing',
-                    className: 'RegExpRoute',
-                    funcName: 'constructor',
-                    paramName: 'pattern'
+                    moduleName: "workbox-routing",
+                    className: "RegExpRoute",
+                    funcName: "constructor",
+                    paramName: "pattern",
                 });
             }
 
-            const match = ({
-                               url
-                           }) => {
+            const match = ({ url }) => {
                 const result = regExp.exec(url.href); // Return immediately if there's no match.
 
                 if (!result) {
@@ -658,10 +750,13 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
                 // See https://github.com/GoogleChrome/workbox/issues/281 for the context
                 // behind this behavior.
 
-
                 if (url.origin !== location.origin && result.index !== 0) {
                     {
-                        logger.debug(`The regular expression '${regExp}' only partially matched ` + `against the cross-origin URL '${url}'. RegExpRoute's will only ` + `handle cross-origin requests if they match the entire URL.`);
+                        logger.debug(
+                            `The regular expression '${regExp}' only partially matched ` +
+                                `against the cross-origin URL '${url}'. RegExpRoute's will only ` +
+                                `handle cross-origin requests if they match the entire URL.`
+                        );
                     }
 
                     return;
@@ -670,13 +765,11 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
                 // indicate a match.
                 // If there are capture groups, then it will return their values.
 
-
                 return result.slice(1);
             };
 
             super(match, handler, method);
         }
-
     }
 
     /*
@@ -687,11 +780,11 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
       https://opensource.org/licenses/MIT.
     */
 
-    const getFriendlyURL = url => {
+    const getFriendlyURL = (url) => {
         const urlObj = new URL(String(url), location.href); // See https://github.com/GoogleChrome/workbox/issues/2323
         // We want to include everything, except for the origin if it's same-origin.
 
-        return urlObj.href.replace(new RegExp(`^${location.origin}`), '');
+        return urlObj.href.replace(new RegExp(`^${location.origin}`), "");
     };
 
     /*
@@ -733,7 +826,6 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
          * instances that are registered.
          */
 
-
         get routes() {
             return this._routes;
         }
@@ -743,16 +835,13 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
          * the event's request.
          */
 
-
         addFetchListener() {
             // See https://github.com/Microsoft/TypeScript/issues/28357#issuecomment-436484705
-            self.addEventListener('fetch', event => {
-                const {
-                    request
-                } = event;
+            self.addEventListener("fetch", (event) => {
+                const { request } = event;
                 const responsePromise = this.handleRequest({
                     request,
-                    event
+                    event,
                 });
 
                 if (responsePromise) {
@@ -784,36 +873,40 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
          * ```
          */
 
-
         addCacheListener() {
             // See https://github.com/Microsoft/TypeScript/issues/28357#issuecomment-436484705
-            self.addEventListener('message', event => {
-                if (event.data && event.data.type === 'CACHE_URLS') {
-                    const {
-                        payload
-                    } = event.data;
+            self.addEventListener("message", (event) => {
+                if (event.data && event.data.type === "CACHE_URLS") {
+                    const { payload } = event.data;
 
                     {
-                        logger.debug(`Caching URLs from the window`, payload.urlsToCache);
+                        logger.debug(
+                            `Caching URLs from the window`,
+                            payload.urlsToCache
+                        );
                     }
 
-                    const requestPromises = Promise.all(payload.urlsToCache.map(entry => {
-                        if (typeof entry === 'string') {
-                            entry = [entry];
-                        }
+                    const requestPromises = Promise.all(
+                        payload.urlsToCache.map((entry) => {
+                            if (typeof entry === "string") {
+                                entry = [entry];
+                            }
 
-                        const request = new Request(...entry);
-                        return this.handleRequest({
-                            request
-                        });
-                        // some reason (probably a bug). The real type here should work but
-                        // doesn't: `Array<Promise<Response> | undefined>`.
-                    })); // TypeScript
+                            const request = new Request(...entry);
+                            return this.handleRequest({
+                                request,
+                            });
+                            // some reason (probably a bug). The real type here should work but
+                            // doesn't: `Array<Promise<Response> | undefined>`.
+                        })
+                    ); // TypeScript
 
                     event.waitUntil(requestPromises); // If a MessageChannel was used, reply to the message on success.
 
                     if (event.ports && event.ports[0]) {
-                        requestPromises.then(() => event.ports[0].postMessage(true));
+                        requestPromises.then(() =>
+                            event.ports[0].postMessage(true)
+                        );
                     }
                 }
             });
@@ -833,56 +926,59 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
          *     route and there's no `defaultHandler`, `undefined` is returned.
          */
 
-
-        handleRequest({
-                          request,
-                          event
-                      }) {
+        handleRequest({ request, event }) {
             {
                 finalAssertExports.isInstance(request, Request, {
-                    moduleName: 'workbox-routing',
-                    className: 'Router',
-                    funcName: 'handleRequest',
-                    paramName: 'options.request'
+                    moduleName: "workbox-routing",
+                    className: "Router",
+                    funcName: "handleRequest",
+                    paramName: "options.request",
                 });
             }
 
             const url = new URL(request.url, location.href);
 
-            if (!url.protocol.startsWith('http')) {
+            if (!url.protocol.startsWith("http")) {
                 {
-                    logger.debug(`Workbox Router only supports URLs that start with 'http'.`);
+                    logger.debug(
+                        `Workbox Router only supports URLs that start with 'http'.`
+                    );
                 }
 
                 return;
             }
 
-            const {
-                params,
-                route
-            } = this.findMatchingRoute({
+            const { params, route } = this.findMatchingRoute({
                 url,
                 request,
-                event
+                event,
             });
             let handler = route && route.handler;
             const debugMessages = [];
 
             {
                 if (handler) {
-                    debugMessages.push([`Found a route to handle this request:`, route]);
+                    debugMessages.push([
+                        `Found a route to handle this request:`,
+                        route,
+                    ]);
 
                     if (params) {
-                        debugMessages.push([`Passing the following params to the route's handler:`, params]);
+                        debugMessages.push([
+                            `Passing the following params to the route's handler:`,
+                            params,
+                        ]);
                     }
                 }
             } // If we don't have a handler because there was no matching route, then
             // fall back to defaultHandler if that's defined.
 
-
             if (!handler && this._defaultHandler) {
                 {
-                    debugMessages.push(`Failed to find a matching route. Falling ` + `back to the default handler.`);
+                    debugMessages.push(
+                        `Failed to find a matching route. Falling ` +
+                            `back to the default handler.`
+                    );
                 }
 
                 handler = this._defaultHandler;
@@ -901,8 +997,10 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
             {
                 // We have a handler, meaning Workbox is going to handle the route.
                 // print the routing details to the console.
-                logger.groupCollapsed(`Router is responding to: ${getFriendlyURL(url)}`);
-                debugMessages.forEach(msg => {
+                logger.groupCollapsed(
+                    `Router is responding to: ${getFriendlyURL(url)}`
+                );
+                debugMessages.forEach((msg) => {
                     if (Array.isArray(msg)) {
                         logger.log(...msg);
                     } else {
@@ -913,7 +1011,6 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
             } // Wrap in try and catch in case the handle method throws a synchronous
             // error. It should still callback to the catch handler.
 
-
             let responsePromise;
 
             try {
@@ -921,18 +1018,23 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
                     url,
                     request,
                     event,
-                    params
+                    params,
                 });
             } catch (err) {
                 responsePromise = Promise.reject(err);
             }
 
             if (responsePromise instanceof Promise && this._catchHandler) {
-                responsePromise = responsePromise.catch(err => {
+                responsePromise = responsePromise.catch((err) => {
                     {
                         // Still include URL here as it will be async from the console group
                         // and may not make sense without the URL
-                        logger.groupCollapsed(`Error thrown when responding to: ` + ` ${getFriendlyURL(url)}. Falling back to Catch Handler.`);
+                        logger.groupCollapsed(
+                            `Error thrown when responding to: ` +
+                                ` ${getFriendlyURL(
+                                    url
+                                )}. Falling back to Catch Handler.`
+                        );
                         logger.error(`Error thrown by:`, route);
                         logger.error(err);
                         logger.groupEnd();
@@ -941,7 +1043,7 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
                     return this._catchHandler.handle({
                         url,
                         request,
-                        event
+                        event,
                     });
                 });
             }
@@ -963,24 +1065,19 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
          *     otherwise.
          */
 
-
-        findMatchingRoute({
-                              url,
-                              request,
-                              event
-                          }) {
+        findMatchingRoute({ url, request, event }) {
             {
                 finalAssertExports.isInstance(url, URL, {
-                    moduleName: 'workbox-routing',
-                    className: 'Router',
-                    funcName: 'findMatchingRoute',
-                    paramName: 'options.url'
+                    moduleName: "workbox-routing",
+                    className: "Router",
+                    funcName: "findMatchingRoute",
+                    paramName: "options.url",
                 });
                 finalAssertExports.isInstance(request, Request, {
-                    moduleName: 'workbox-routing',
-                    className: 'Router',
-                    funcName: 'findMatchingRoute',
-                    paramName: 'options.request'
+                    moduleName: "workbox-routing",
+                    className: "Router",
+                    funcName: "findMatchingRoute",
+                    paramName: "options.request",
                 });
             }
 
@@ -991,34 +1088,38 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
                 const matchResult = route.match({
                     url,
                     request,
-                    event
+                    event,
                 });
 
                 if (matchResult) {
                     // See https://github.com/GoogleChrome/workbox/issues/2079
                     params = matchResult;
 
-                    if (Array.isArray(matchResult) && matchResult.length === 0) {
+                    if (
+                        Array.isArray(matchResult) &&
+                        matchResult.length === 0
+                    ) {
                         // Instead of passing an empty array in as params, use undefined.
                         params = undefined;
-                    } else if (matchResult.constructor === Object && Object.keys(matchResult).length === 0) {
+                    } else if (
+                        matchResult.constructor === Object &&
+                        Object.keys(matchResult).length === 0
+                    ) {
                         // Instead of passing an empty object in as params, use undefined.
                         params = undefined;
-                    } else if (typeof matchResult === 'boolean') {
+                    } else if (typeof matchResult === "boolean") {
                         // For the boolean value true (rather than just something truth-y),
                         // don't set params.
                         // See https://github.com/GoogleChrome/workbox/pull/2134#issuecomment-513924353
                         params = undefined;
                     } // Return early if have a match.
 
-
                     return {
                         route,
-                        params
+                        params,
                     };
                 }
             } // If no match was found above, return and empty object.
-
 
             return {};
         }
@@ -1034,7 +1135,6 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
          * function that returns a Promise resulting in a Response.
          */
 
-
         setDefaultHandler(handler) {
             this._defaultHandler = normalizeHandler(handler);
         }
@@ -1047,7 +1147,6 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
          * function that returns a Promise resulting in a Response.
          */
 
-
         setCatchHandler(handler) {
             this._catchHandler = normalizeHandler(handler);
         }
@@ -1058,38 +1157,37 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
          * @param {module:workbox-routing.Route} route The route to register.
          */
 
-
         registerRoute(route) {
             {
-                finalAssertExports.isType(route, 'object', {
-                    moduleName: 'workbox-routing',
-                    className: 'Router',
-                    funcName: 'registerRoute',
-                    paramName: 'route'
+                finalAssertExports.isType(route, "object", {
+                    moduleName: "workbox-routing",
+                    className: "Router",
+                    funcName: "registerRoute",
+                    paramName: "route",
                 });
-                finalAssertExports.hasMethod(route, 'match', {
-                    moduleName: 'workbox-routing',
-                    className: 'Router',
-                    funcName: 'registerRoute',
-                    paramName: 'route'
+                finalAssertExports.hasMethod(route, "match", {
+                    moduleName: "workbox-routing",
+                    className: "Router",
+                    funcName: "registerRoute",
+                    paramName: "route",
                 });
-                finalAssertExports.isType(route.handler, 'object', {
-                    moduleName: 'workbox-routing',
-                    className: 'Router',
-                    funcName: 'registerRoute',
-                    paramName: 'route'
+                finalAssertExports.isType(route.handler, "object", {
+                    moduleName: "workbox-routing",
+                    className: "Router",
+                    funcName: "registerRoute",
+                    paramName: "route",
                 });
-                finalAssertExports.hasMethod(route.handler, 'handle', {
-                    moduleName: 'workbox-routing',
-                    className: 'Router',
-                    funcName: 'registerRoute',
-                    paramName: 'route.handler'
+                finalAssertExports.hasMethod(route.handler, "handle", {
+                    moduleName: "workbox-routing",
+                    className: "Router",
+                    funcName: "registerRoute",
+                    paramName: "route.handler",
                 });
-                finalAssertExports.isType(route.method, 'string', {
-                    moduleName: 'workbox-routing',
-                    className: 'Router',
-                    funcName: 'registerRoute',
-                    paramName: 'route.method'
+                finalAssertExports.isType(route.method, "string", {
+                    moduleName: "workbox-routing",
+                    className: "Router",
+                    funcName: "registerRoute",
+                    paramName: "route.method",
                 });
             }
 
@@ -1097,7 +1195,6 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
                 this._routes.set(route.method, []);
             } // Give precedence to all of the earlier routes by adding this additional
             // route to the end of the array.
-
 
             this._routes.get(route.method).push(route);
         }
@@ -1108,12 +1205,14 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
          * @param {module:workbox-routing.Route} route The route to unregister.
          */
 
-
         unregisterRoute(route) {
             if (!this._routes.has(route.method)) {
-                throw new WorkboxError('unregister-route-but-not-found-with-method', {
-                    method: route.method
-                });
+                throw new WorkboxError(
+                    "unregister-route-but-not-found-with-method",
+                    {
+                        method: route.method,
+                    }
+                );
             }
 
             const routeIndex = this._routes.get(route.method).indexOf(route);
@@ -1121,10 +1220,9 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
             if (routeIndex > -1) {
                 this._routes.get(route.method).splice(routeIndex, 1);
             } else {
-                throw new WorkboxError('unregister-route-route-not-registered');
+                throw new WorkboxError("unregister-route-route-not-registered");
             }
         }
-
     }
 
     /*
@@ -1184,55 +1282,64 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
     function registerRoute(capture, handler, method) {
         let route;
 
-        if (typeof capture === 'string') {
+        if (typeof capture === "string") {
             const captureUrl = new URL(capture, location.href);
 
             {
-                if (!(capture.startsWith('/') || capture.startsWith('http'))) {
-                    throw new WorkboxError('invalid-string', {
-                        moduleName: 'workbox-routing',
-                        funcName: 'registerRoute',
-                        paramName: 'capture'
+                if (!(capture.startsWith("/") || capture.startsWith("http"))) {
+                    throw new WorkboxError("invalid-string", {
+                        moduleName: "workbox-routing",
+                        funcName: "registerRoute",
+                        paramName: "capture",
                     });
                 } // We want to check if Express-style wildcards are in the pathname only.
 
+                const valueToCheck = capture.startsWith("http")
+                    ? captureUrl.pathname
+                    : capture; // See https://github.com/pillarjs/path-to-regexp#parameters
 
-                const valueToCheck = capture.startsWith('http') ? captureUrl.pathname : capture; // See https://github.com/pillarjs/path-to-regexp#parameters
-
-                const wildcards = '[*:?+]';
+                const wildcards = "[*:?+]";
 
                 if (new RegExp(`${wildcards}`).exec(valueToCheck)) {
-                    logger.debug(`The '$capture' parameter contains an Express-style wildcard ` + `character (${wildcards}). Strings are now always interpreted as ` + `exact matches; use a RegExp for partial or wildcard matches.`);
+                    logger.debug(
+                        `The '$capture' parameter contains an Express-style wildcard ` +
+                            `character (${wildcards}). Strings are now always interpreted as ` +
+                            `exact matches; use a RegExp for partial or wildcard matches.`
+                    );
                 }
             }
 
-            const matchCallback = ({
-                                       url
-                                   }) => {
+            const matchCallback = ({ url }) => {
                 {
-                    if (url.pathname === captureUrl.pathname && url.origin !== captureUrl.origin) {
-                        logger.debug(`${capture} only partially matches the cross-origin URL ` + `${url}. This route will only handle cross-origin requests ` + `if they match the entire URL.`);
+                    if (
+                        url.pathname === captureUrl.pathname &&
+                        url.origin !== captureUrl.origin
+                    ) {
+                        logger.debug(
+                            `${capture} only partially matches the cross-origin URL ` +
+                                `${url}. This route will only handle cross-origin requests ` +
+                                `if they match the entire URL.`
+                        );
                     }
                 }
 
                 return url.href === captureUrl.href;
             }; // If `capture` is a string then `handler` and `method` must be present.
 
-
             route = new Route(matchCallback, handler, method);
         } else if (capture instanceof RegExp) {
             // If `capture` is a `RegExp` then `handler` and `method` must be present.
             route = new RegExpRoute(capture, handler, method);
-        } else if (typeof capture === 'function') {
+        } else if (typeof capture === "function") {
             // If `capture` is a function then `handler` and `method` must be present.
             route = new Route(capture, handler, method);
         } else if (capture instanceof Route) {
             route = capture;
         } else {
-            throw new WorkboxError('unsupported-route-type', {
-                moduleName: 'workbox-routing',
-                funcName: 'registerRoute',
-                paramName: 'capture'
+            throw new WorkboxError("unsupported-route-type", {
+                moduleName: "workbox-routing",
+                funcName: "registerRoute",
+                paramName: "capture",
             });
         }
 
@@ -1250,8 +1357,8 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
     */
     const pluginUtils = {
         filter: (plugins, callbackName) => {
-            return plugins.filter(plugin => callbackName in plugin);
-        }
+            return plugins.filter((plugin) => callbackName in plugin);
+        },
     };
 
     /*
@@ -1278,24 +1385,26 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
      */
 
     const wrappedFetch = async ({
-                                    request,
-                                    fetchOptions,
-                                    event,
-                                    plugins = []
-                                }) => {
-        if (typeof request === 'string') {
+        request,
+        fetchOptions,
+        event,
+        plugins = [],
+    }) => {
+        if (typeof request === "string") {
             request = new Request(request);
         } // We *should* be able to call `await event.preloadResponse` even if it's
         // undefined, but for some reason, doing so leads to errors in our Node unit
         // tests. To work around that, explicitly check preloadResponse's value first.
-
 
         if (event instanceof FetchEvent && event.preloadResponse) {
             const possiblePreloadResponse = await event.preloadResponse;
 
             if (possiblePreloadResponse) {
                 {
-                    logger.log(`Using a preloaded navigation response for ` + `'${getFriendlyURL(request.url)}'`);
+                    logger.log(
+                        `Using a preloaded navigation response for ` +
+                            `'${getFriendlyURL(request.url)}'`
+                    );
                 }
 
                 return possiblePreloadResponse;
@@ -1304,94 +1413,111 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
 
         {
             finalAssertExports.isInstance(request, Request, {
-                paramName: 'request',
+                paramName: "request",
                 expectedClass: Request,
-                moduleName: 'workbox-core',
-                className: 'fetchWrapper',
-                funcName: 'wrappedFetch'
+                moduleName: "workbox-core",
+                className: "fetchWrapper",
+                funcName: "wrappedFetch",
             });
         }
 
-        const failedFetchPlugins = pluginUtils.filter(plugins, "fetchDidFail"
+        const failedFetchPlugins = pluginUtils.filter(
+            plugins,
+            "fetchDidFail"
             /* FETCH_DID_FAIL */
         ); // If there is a fetchDidFail plugin, we need to save a clone of the
         // original request before it's either modified by a requestWillFetch
         // plugin or before the original request's body is consumed via fetch().
 
-        const originalRequest = failedFetchPlugins.length > 0 ? request.clone() : null;
+        const originalRequest =
+            failedFetchPlugins.length > 0 ? request.clone() : null;
 
         try {
             for (const plugin of plugins) {
-                if ("requestWillFetch"
+                if (
+                    "requestWillFetch" in
                     /* REQUEST_WILL_FETCH */
-                    in plugin) {
-                    const pluginMethod = plugin["requestWillFetch"
-                        /* REQUEST_WILL_FETCH */
+                    plugin
+                ) {
+                    const pluginMethod =
+                        plugin[
+                            "requestWillFetch"
+                            /* REQUEST_WILL_FETCH */
                         ];
                     const requestClone = request.clone();
                     request = await pluginMethod.call(plugin, {
                         request: requestClone,
-                        event
+                        event,
                     });
 
-                    if ("development" !== 'production') {
+                    if ("development" !== "production") {
                         if (request) {
                             finalAssertExports.isInstance(request, Request, {
-                                moduleName: 'Plugin',
-                                funcName: "cachedResponseWillBeUsed"
+                                moduleName: "Plugin",
+                                funcName: "cachedResponseWillBeUsed",
                                 /* CACHED_RESPONSE_WILL_BE_USED */
-                                ,
-                                isReturnValueProblem: true
+                                isReturnValueProblem: true,
                             });
                         }
                     }
                 }
             }
         } catch (err) {
-            throw new WorkboxError('plugin-error-request-will-fetch', {
-                thrownError: err
+            throw new WorkboxError("plugin-error-request-will-fetch", {
+                thrownError: err,
             });
         } // The request can be altered by plugins with `requestWillFetch` making
         // the original request (Most likely from a `fetch` event) to be different
         // to the Request we make. Pass both to `fetchDidFail` to aid debugging.
-
 
         const pluginFilteredRequest = request.clone();
 
         try {
             let fetchResponse; // See https://github.com/GoogleChrome/workbox/issues/1796
 
-            if (request.mode === 'navigate') {
+            if (request.mode === "navigate") {
                 fetchResponse = await fetch(request);
             } else {
                 fetchResponse = await fetch(request, fetchOptions);
             }
 
-            if ("development" !== 'production') {
-                logger.debug(`Network request for ` + `'${getFriendlyURL(request.url)}' returned a response with ` + `status '${fetchResponse.status}'.`);
+            if ("development" !== "production") {
+                logger.debug(
+                    `Network request for ` +
+                        `'${getFriendlyURL(
+                            request.url
+                        )}' returned a response with ` +
+                        `status '${fetchResponse.status}'.`
+                );
             }
 
             for (const plugin of plugins) {
-                if ("fetchDidSucceed"
+                if (
+                    "fetchDidSucceed" in
                     /* FETCH_DID_SUCCEED */
-                    in plugin) {
-                    fetchResponse = await plugin["fetchDidSucceed"
+                    plugin
+                ) {
+                    fetchResponse = await plugin[
+                        "fetchDidSucceed"
                         /* FETCH_DID_SUCCEED */
-                        ].call(plugin, {
+                    ].call(plugin, {
                         event,
                         request: pluginFilteredRequest,
-                        response: fetchResponse
+                        response: fetchResponse,
                     });
 
-                    if ("development" !== 'production') {
+                    if ("development" !== "production") {
                         if (fetchResponse) {
-                            finalAssertExports.isInstance(fetchResponse, Response, {
-                                moduleName: 'Plugin',
-                                funcName: "fetchDidSucceed"
-                                /* FETCH_DID_SUCCEED */
-                                ,
-                                isReturnValueProblem: true
-                            });
+                            finalAssertExports.isInstance(
+                                fetchResponse,
+                                Response,
+                                {
+                                    moduleName: "Plugin",
+                                    funcName: "fetchDidSucceed",
+                                    /* FETCH_DID_SUCCEED */
+                                    isReturnValueProblem: true,
+                                }
+                            );
                         }
                     }
                 }
@@ -1400,17 +1526,22 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
             return fetchResponse;
         } catch (error) {
             {
-                logger.error(`Network request for ` + `'${getFriendlyURL(request.url)}' threw an error.`, error);
+                logger.error(
+                    `Network request for ` +
+                        `'${getFriendlyURL(request.url)}' threw an error.`,
+                    error
+                );
             }
 
             for (const plugin of failedFetchPlugins) {
-                await plugin["fetchDidFail"
+                await plugin[
+                    "fetchDidFail"
                     /* FETCH_DID_FAIL */
-                    ].call(plugin, {
+                ].call(plugin, {
                     error,
                     event,
                     originalRequest: originalRequest.clone(),
-                    request: pluginFilteredRequest.clone()
+                    request: pluginFilteredRequest.clone(),
                 });
             }
 
@@ -1419,13 +1550,12 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
     };
 
     const fetchWrapper = {
-        fetch: wrappedFetch
+        fetch: wrappedFetch,
     };
 
     try {
-        self['workbox:strategies:5.1.3'] && _();
-    } catch (e) {
-    }
+        self["workbox:strategies:5.1.3"] && _();
+    } catch (e) {}
 
     /*
       Copyright 2018 Google LLC
@@ -1435,14 +1565,17 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
       https://opensource.org/licenses/MIT.
     */
     const messages$1 = {
-        strategyStart: (strategyName, request) => `Using ${strategyName} to respond to '${getFriendlyURL(request.url)}'`,
-        printFinalResponse: response => {
+        strategyStart: (strategyName, request) =>
+            `Using ${strategyName} to respond to '${getFriendlyURL(
+                request.url
+            )}'`,
+        printFinalResponse: (response) => {
             if (response) {
                 logger.groupCollapsed(`View the final response here.`);
-                logger.log(response || '[No response returned]');
+                logger.log(response || "[No response returned]");
                 logger.groupEnd();
             }
-        }
+        },
     };
 
     /*
@@ -1493,21 +1626,17 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
          * @return {Promise<Response>}
          */
 
-
-        async handle({
-                         event,
-                         request
-                     }) {
-            if (typeof request === 'string') {
+        async handle({ event, request }) {
+            if (typeof request === "string") {
                 request = new Request(request);
             }
 
             {
                 finalAssertExports.isInstance(request, Request, {
-                    moduleName: 'workbox-strategies',
-                    className: 'NetworkOnly',
-                    funcName: 'handle',
-                    paramName: 'request'
+                    moduleName: "workbox-strategies",
+                    className: "NetworkOnly",
+                    funcName: "handle",
+                    paramName: "request",
                 });
             }
 
@@ -1519,14 +1648,16 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
                     request,
                     event,
                     fetchOptions: this._fetchOptions,
-                    plugins: this._plugins
+                    plugins: this._plugins,
                 });
             } catch (err) {
                 error = err;
             }
 
             {
-                logger.groupCollapsed(messages$1.strategyStart('NetworkOnly', request));
+                logger.groupCollapsed(
+                    messages$1.strategyStart("NetworkOnly", request)
+                );
 
                 if (response) {
                     logger.log(`Got response from network.`);
@@ -1539,15 +1670,14 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
             }
 
             if (!response) {
-                throw new WorkboxError('no-response', {
+                throw new WorkboxError("no-response", {
                     url: request.url,
-                    error
+                    error,
                 });
             }
 
             return response;
         }
-
     }
 
     /*
@@ -1568,7 +1698,7 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
     function skipWaiting() {
         // We need to explicitly call `self.skipWaiting()` here because we're
         // shadowing `skipWaiting` with this local function.
-        self.addEventListener('install', () => self.skipWaiting());
+        self.addEventListener("install", () => self.skipWaiting());
     }
 
     /*
@@ -1586,13 +1716,12 @@ define("./workbox-8c6a447f.js", ['exports'], function (exports) {
      */
 
     function clientsClaim() {
-        self.addEventListener('activate', () => self.clients.claim());
+        self.addEventListener("activate", () => self.clients.claim());
     }
 
     exports.NetworkOnly = NetworkOnly;
     exports.clientsClaim = clientsClaim;
     exports.registerRoute = registerRoute;
     exports.skipWaiting = skipWaiting;
-
 });
 //# sourceMappingURL=workbox-8c6a447f.js.map

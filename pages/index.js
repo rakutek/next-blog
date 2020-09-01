@@ -1,58 +1,53 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
-import Date from '../components/date'
+import Link from "next/link";
+import Layout from "../components/Layout";
+import Date from "../components/date";
 
-import {getSortedPostsData} from '../lib/posts'
-
+import { getSortedPostsData } from "../lib/posts";
 
 import styled from "styled-components";
 
 const Light = styled.small`
- color: #666;
- 
-`
+    color: #666;
+`;
 const List = styled.li`
-  list-style: none;
-  margin: 0;
-  padding-bottom: 7px;
-`
+    list-style: none;
+    margin: 0;
+    padding-bottom: 7px;
+`;
 
 const Title = styled.a`
-  font-size: 24px;
-`
+    font-size: 24px;
+`;
 
-
-const IndexPage = ({allPostsData}) => (
+const IndexPage = ({ allPostsData }) => (
     <Layout title="Home | Next.js + TypeScript Example">
+        <h1>Blog</h1>
 
-
-    <h1>Blog</h1>
-        {allPostsData.map(({id, date, title}) => (
+        {allPostsData.map(({ id, date, title }) => (
             <List>
                 <Link href="/posts/[id]" as={`/posts/${id}`}>
-                    <Title><a>{title}</a></Title>
+                    <Title>
+                        <a>{title}</a>
+                    </Title>
                 </Link>
-                <br/>
+
+                <br />
 
                 <Light>
-                    <Date dateString={date}/>
+                    <Date dateString={date} />
                 </Light>
-
             </List>
         ))}
-
-
     </Layout>
-)
+);
 
-export default IndexPage
-
+export default IndexPage;
 
 export async function getStaticProps() {
-    const allPostsData = getSortedPostsData()
+    const allPostsData = getSortedPostsData();
     return {
         props: {
-            allPostsData
-        }
-    }
+            allPostsData,
+        },
+    };
 }
