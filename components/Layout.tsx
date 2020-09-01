@@ -3,6 +3,7 @@ import Head from "next/head";
 
 import styled from "styled-components";
 import media from "styled-media-query";
+import Link from "next/link";
 
 type Props = {
     children?: ReactNode;
@@ -11,7 +12,9 @@ type Props = {
 
 const HeaderWrapper = styled.header`
     text-align: center;
-    h1 {
+    a {
+        font-weight: bold;
+        color: black;
         display: inline-block;
         font-size: 38px;
     }
@@ -22,6 +25,7 @@ const HeaderWrapper = styled.header`
     ${media.lessThan("medium")`
         max-width: 23rem;
         padding-left:9px;
+        padding-right:9px
         `}
 `;
 
@@ -67,7 +71,9 @@ const Layout = ({ children, title = "rakutek.dev" }: Props) => (
         </Head>
 
         <HeaderWrapper>
-            <h1>rakutek.dev🧑‍💻</h1>
+            <Link href="/" passHref>
+                <a>rakutek.dev🧑‍💻</a>
+            </Link>
 
             <hr />
         </HeaderWrapper>
