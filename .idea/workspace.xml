@@ -10,11 +10,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e230f13-38d7-4443-80ef-0e851c21bbc1" name="デフォルト変更リスト" comment="olのpaddingを消した">
-      <change afterPath="$PROJECT_DIR$/lib/gtag.js" afterDir="false" />
+    <list default="true" id="3e230f13-38d7-4443-80ef-0e851c21bbc1" name="デフォルト変更リスト" comment="GA導入できた">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_document.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_document.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/sw.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/sw.js.map" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -304,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599022051240</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="GA導入できた">
+      <created>1599023591874</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1599023591874</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -326,7 +331,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="無駄な文章消した" />
     <MESSAGE value="Prettierしてなかった" />
     <MESSAGE value="footer削除" />
     <MESSAGE value="prettier" />
@@ -351,7 +355,8 @@
     <MESSAGE value="remarkdでシンタックスハイライト対応した" />
     <MESSAGE value="LightHouseでliにolがないって起こられた" />
     <MESSAGE value="olのpaddingを消した" />
-    <option name="LAST_COMMIT_MESSAGE" value="olのpaddingを消した" />
+    <MESSAGE value="GA導入できた" />
+    <option name="LAST_COMMIT_MESSAGE" value="GA導入できた" />
   </component>
   <component name="WindowStateProjectService">
     <state x="284" y="181" key="#TypeScript" timestamp="1599019077581">
@@ -430,6 +435,10 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="68" y="293" key="IDE.errors.dialog/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599019002876" />
+    <state x="88" y="312" key="MultipleFileMergeDialog" timestamp="1599023612664">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="88" y="312" key="MultipleFileMergeDialog/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599023612664" />
     <state x="774" y="118" key="RollbackChangesDialog" timestamp="1598954403576">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
@@ -438,10 +447,10 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="25" y="23" key="SettingsEditor/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599019052115" />
-    <state x="80" y="287" key="Vcs.Push.Dialog.v2" timestamp="1599022112437">
+    <state x="80" y="287" key="Vcs.Push.Dialog.v2" timestamp="1599023599625">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="80" y="287" key="Vcs.Push.Dialog.v2/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599022112437" />
+    <state x="80" y="287" key="Vcs.Push.Dialog.v2/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599023599625" />
     <state x="466" y="403" key="cloudConfig.SelfSettingsDialog" timestamp="1599019595705">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
