@@ -14,13 +14,12 @@ const HeaderWrapper = styled.header`
     text-align: center;
     a {
         font-weight: bold;
-        color: black;
-        display: inline-block;
         font-size: 38px;
+        display: block;
     }
 
     height: 0;
-    padding-bottom: 15px;
+    padding-bottom: 14px;
 
     ${media.lessThan("small")`
         max-width: 23rem;
@@ -89,7 +88,7 @@ const Layout = ({ children, title = "rakutek.dev" }: Props) => (
             </Head>
 
             <HeaderWrapper>
-                <Link href="/" as={""}>
+                <Link href="/">
                     <a>rakutek.dev🧑‍💻</a>
                 </Link>
 
