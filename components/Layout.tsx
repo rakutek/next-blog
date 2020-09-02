@@ -100,7 +100,6 @@ const Layout = ({ children, title = "rakutek.dev" }: Props) => (
                 <Wrapper>
                     <Main>{children}</Main>
                 </Wrapper>
-
                 <Footer>.</Footer>
             </Flex>
         </Body>
