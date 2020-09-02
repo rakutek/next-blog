@@ -21,17 +21,19 @@ const IndexPage = ({ allPostsData }) => (
         <h1>Blog</h1>
 
         {allPostsData.map(({ id, date, title }) => (
-            <List>
-                <Light>{date}</Light>
-                <br />
-                <Link href="/[id]" as={`/${id}`}>
-                    {/*<Link href="/posts/[id]" as={`/posts/${id}`}>*/}
+            <ol>
+                <List>
+                    <Light>{date}</Light>
+                    <br />
+                    <Link href="/[id]" as={`/${id}`}>
+                        {/*<Link href="/posts/[id]" as={`/posts/${id}`}>*/}
 
-                    <Title>
-                        <a>{title}</a>
-                    </Title>
-                </Link>
-            </List>
+                        <Title>
+                            <a>{title}</a>
+                        </Title>
+                    </Link>
+                </List>
+            </ol>
         ))}
     </Layout>
 );

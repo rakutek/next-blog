@@ -10,17 +10,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e230f13-38d7-4443-80ef-0e851c21bbc1" name="デフォルト変更リスト" comment="indexでタイトルと日付を反対に">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="3e230f13-38d7-4443-80ef-0e851c21bbc1" name="デフォルト変更リスト" comment="remarkdでシンタックスハイライト対応した">
+      <change afterPath="$PROJECT_DIR$/.idea/vagrant.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/posts.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/posts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/[id].js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/[id].js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/fafa.md" beforeDir="false" afterPath="$PROJECT_DIR$/posts/fafa.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/posts/nebou-zoom.md" beforeDir="false" afterPath="$PROJECT_DIR$/posts/nebou-zoom.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/Layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/sw.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/sw.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,6 +39,18 @@
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
+  </component>
+  <component name="GithubProjectSettings">
+    <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="dev" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="rakutek" />
+    <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="next-blog" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/rakutek/next-blog" />
+      </set>
+    </option>
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -71,7 +78,7 @@
     <property name="prettierjs.PrettierConfiguration.Package" value="$USER_HOME$/.nodebrew/node/v14.6.0/lib/node_modules/prettier" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="run.prettier.on.save" value="true" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
@@ -132,11 +139,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
-        <item itemvalue="JavaScript デバッグ.localhost:3000" />
-        <item itemvalue="npm.deploy" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.export" />
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.deploy" />
+        <item itemvalue="JavaScript デバッグ.localhost:3000" />
       </list>
     </recent_temporary>
   </component>
@@ -154,7 +161,8 @@
       <workItem from="1598967358141" duration="10015000" />
       <workItem from="1599010334837" duration="2726000" />
       <workItem from="1599013253395" duration="1682000" />
-      <workItem from="1599016874289" duration="613000" />
+      <workItem from="1599016874289" duration="1081000" />
+      <workItem from="1599018076057" duration="2646000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1598935563860</created>
@@ -275,7 +283,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598979426708</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="remarkdでシンタックスハイライト対応した">
+      <created>1599017715704</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1599017715704</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,7 +312,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="中央揃え" />
     <MESSAGE value="記事デザイン調整" />
     <MESSAGE value="styled-componentsでリロードしたら死ぬ問題を解決" />
     <MESSAGE value="無駄な文章消した" />
@@ -322,9 +336,14 @@
     <MESSAGE value="footer色変更" />
     <MESSAGE value="footer位置固定" />
     <MESSAGE value="indexでタイトルと日付を反対に" />
-    <option name="LAST_COMMIT_MESSAGE" value="indexでタイトルと日付を反対に" />
+    <MESSAGE value="remarkdでシンタックスハイライト対応した" />
+    <option name="LAST_COMMIT_MESSAGE" value="remarkdでシンタックスハイライト対応した" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="284" y="181" key="#TypeScript" timestamp="1599019077581">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="284" y="181" key="#TypeScript/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599019077581" />
     <state x="376" y="306" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1599012287292">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
@@ -341,22 +360,26 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="121" y="336" key="EditFileWatcherDialog/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598952209632" />
-    <state width="939" height="206" key="GridCell.Tab.0.bottom" timestamp="1599016988380">
+    <state x="458" y="427" key="Github.CreatePullRequestDialog" timestamp="1599018127598">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="939" height="206" key="GridCell.Tab.0.bottom/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599016988380" />
-    <state width="939" height="206" key="GridCell.Tab.0.center" timestamp="1599016988379">
+    <state x="458" y="427" key="Github.CreatePullRequestDialog/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599018127598" />
+    <state width="939" height="206" key="GridCell.Tab.0.bottom" timestamp="1599018853216">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="939" height="206" key="GridCell.Tab.0.center/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599016988379" />
-    <state width="939" height="206" key="GridCell.Tab.0.left" timestamp="1599016988376">
+    <state width="939" height="206" key="GridCell.Tab.0.bottom/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599018853216" />
+    <state width="939" height="206" key="GridCell.Tab.0.center" timestamp="1599018853215">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="939" height="206" key="GridCell.Tab.0.left/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599016988376" />
-    <state width="939" height="206" key="GridCell.Tab.0.right" timestamp="1599016988380">
+    <state width="939" height="206" key="GridCell.Tab.0.center/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599018853215" />
+    <state width="939" height="206" key="GridCell.Tab.0.left" timestamp="1599018853215">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="939" height="206" key="GridCell.Tab.0.right/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599016988380" />
+    <state width="939" height="206" key="GridCell.Tab.0.left/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599018853215" />
+    <state width="939" height="206" key="GridCell.Tab.0.right" timestamp="1599018853216">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="939" height="206" key="GridCell.Tab.0.right/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599018853216" />
     <state width="939" height="240" key="GridCell.Tab.1.bottom" timestamp="1599014937354">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
@@ -389,22 +412,26 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state width="939" height="240" key="GridCell.Tab.2.right/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599014937355" />
-    <state x="68" y="293" key="IDE.errors.dialog" timestamp="1598971833979">
+    <state x="68" y="293" key="IDE.errors.dialog" timestamp="1599019002876">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="68" y="293" key="IDE.errors.dialog/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598971833979" />
+    <state x="68" y="293" key="IDE.errors.dialog/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599019002876" />
     <state x="774" y="118" key="RollbackChangesDialog" timestamp="1598954403576">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="774" y="118" key="RollbackChangesDialog/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598954403576" />
-    <state x="25" y="23" key="SettingsEditor" timestamp="1598952499758">
+    <state x="25" y="23" key="SettingsEditor" timestamp="1599019052115">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="25" y="23" key="SettingsEditor/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598952499758" />
-    <state x="80" y="287" key="Vcs.Push.Dialog.v2" timestamp="1598980116628">
+    <state x="25" y="23" key="SettingsEditor/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599019052115" />
+    <state x="80" y="287" key="Vcs.Push.Dialog.v2" timestamp="1599018516679">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="80" y="287" key="Vcs.Push.Dialog.v2/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598980116628" />
+    <state x="80" y="287" key="Vcs.Push.Dialog.v2/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599018516679" />
+    <state x="466" y="403" key="cloudConfig.SelfSettingsDialog" timestamp="1599019595705">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="466" y="403" key="cloudConfig.SelfSettingsDialog/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599019595705" />
     <state x="157" y="290" width="645" height="522" key="find.popup" timestamp="1598954107550">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
@@ -413,9 +440,9 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="276" y="442" key="git4idea.remote.GitConfigureRemotesDialog/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598926372899" />
-    <state x="145" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1598952238749">
+    <state x="145" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1599018452575">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="145" y="258" width="670" height="676" key="search.everywhere.popup/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598952238749" />
+    <state x="145" y="258" width="670" height="676" key="search.everywhere.popup/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599018452575" />
   </component>
 </project>
