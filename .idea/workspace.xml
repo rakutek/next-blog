@@ -10,10 +10,8 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e230f13-38d7-4443-80ef-0e851c21bbc1" name="デフォルト変更リスト" comment="LightHouseでliにolがないって起こられた">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/sw.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/sw.js.map" afterDir="false" />
+    <list default="true" id="3e230f13-38d7-4443-80ef-0e851c21bbc1" name="デフォルト変更リスト" comment="olのpaddingを消した">
+      <change beforePath="$PROJECT_DIR$/pages/_document.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_document.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +158,7 @@
       <workItem from="1599010334837" duration="2726000" />
       <workItem from="1599013253395" duration="1682000" />
       <workItem from="1599016874289" duration="1081000" />
-      <workItem from="1599018076057" duration="3426000" />
+      <workItem from="1599018076057" duration="3705000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1598935563860</created>
@@ -295,7 +293,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599021323394</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="olのpaddingを消した">
+      <created>1599022051240</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1599022051240</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,7 +322,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="styled-componentsでリロードしたら死ぬ問題を解決" />
     <MESSAGE value="無駄な文章消した" />
     <MESSAGE value="Prettierしてなかった" />
     <MESSAGE value="footer削除" />
@@ -342,7 +346,8 @@
     <MESSAGE value="indexでタイトルと日付を反対に" />
     <MESSAGE value="remarkdでシンタックスハイライト対応した" />
     <MESSAGE value="LightHouseでliにolがないって起こられた" />
-    <option name="LAST_COMMIT_MESSAGE" value="LightHouseでliにolがないって起こられた" />
+    <MESSAGE value="olのpaddingを消した" />
+    <option name="LAST_COMMIT_MESSAGE" value="olのpaddingを消した" />
   </component>
   <component name="WindowStateProjectService">
     <state x="284" y="181" key="#TypeScript" timestamp="1599019077581">
@@ -365,10 +370,10 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="121" y="336" key="EditFileWatcherDialog/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598952209632" />
-    <state x="458" y="427" key="Github.CreatePullRequestDialog" timestamp="1599018127598">
+    <state x="458" y="427" key="Github.CreatePullRequestDialog" timestamp="1599022104442">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="458" y="427" key="Github.CreatePullRequestDialog/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599018127598" />
+    <state x="458" y="427" key="Github.CreatePullRequestDialog/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599022104442" />
     <state width="1146" height="206" key="GridCell.Tab.0.bottom" timestamp="1599021227598">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
@@ -429,10 +434,10 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="25" y="23" key="SettingsEditor/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599019052115" />
-    <state x="80" y="287" key="Vcs.Push.Dialog.v2" timestamp="1599021338632">
+    <state x="80" y="287" key="Vcs.Push.Dialog.v2" timestamp="1599022112437">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="80" y="287" key="Vcs.Push.Dialog.v2/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599021338632" />
+    <state x="80" y="287" key="Vcs.Push.Dialog.v2/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599022112437" />
     <state x="466" y="403" key="cloudConfig.SelfSettingsDialog" timestamp="1599019595705">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
@@ -445,9 +450,9 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="276" y="442" key="git4idea.remote.GitConfigureRemotesDialog/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598926372899" />
-    <state x="145" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1599018452575">
+    <state x="145" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1599022076429">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="145" y="258" width="670" height="676" key="search.everywhere.popup/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599018452575" />
+    <state x="145" y="258" width="670" height="676" key="search.everywhere.popup/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599022076429" />
   </component>
 </project>

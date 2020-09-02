@@ -11,7 +11,7 @@ export default class extends Document {
 
     render() {
         return (
-            <html lang="en" dir="ltr">
+            <html lang="ja" dir="ltr">
                 <Head>
                     <meta name="application-name" content={APP_NAME} />
                     <meta name="apple-mobile-web-app-capable" content="yes" />
