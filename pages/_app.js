@@ -1,7 +1,8 @@
-import "github-markdown-css";
-import "github-markdown-css/github-markdown.css";
+import Router from "next/router";
 
-import "highlight.js/styles/a11y-dark.css";
+import * as gtag from "../lib/gtag";
+
+Router.events.on("routeChangeComplete", (url) => gtag.pageview(url));
 
 export default function App({ Component, pageProps }) {
     return <Component {...pageProps} />;

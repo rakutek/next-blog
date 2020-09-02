@@ -11,7 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e230f13-38d7-4443-80ef-0e851c21bbc1" name="デフォルト変更リスト" comment="olのpaddingを消した">
+      <change afterPath="$PROJECT_DIR$/lib/gtag.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/_document.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_document.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/sw.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/sw.js.map" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,9 +139,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.export" />
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.deploy" />
         <item itemvalue="JavaScript デバッグ.localhost:3000" />
       </list>
@@ -374,22 +378,22 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="458" y="427" key="Github.CreatePullRequestDialog/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599022104442" />
-    <state width="1146" height="206" key="GridCell.Tab.0.bottom" timestamp="1599021227598">
+    <state width="1146" height="206" key="GridCell.Tab.0.bottom" timestamp="1599023380610">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1146" height="206" key="GridCell.Tab.0.bottom/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599021227598" />
-    <state width="1146" height="206" key="GridCell.Tab.0.center" timestamp="1599021227598">
+    <state width="1146" height="206" key="GridCell.Tab.0.bottom/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599023380610" />
+    <state width="1146" height="206" key="GridCell.Tab.0.center" timestamp="1599023380609">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1146" height="206" key="GridCell.Tab.0.center/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599021227598" />
-    <state width="1146" height="206" key="GridCell.Tab.0.left" timestamp="1599021227597">
+    <state width="1146" height="206" key="GridCell.Tab.0.center/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599023380609" />
+    <state width="1146" height="206" key="GridCell.Tab.0.left" timestamp="1599023380609">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1146" height="206" key="GridCell.Tab.0.left/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599021227597" />
-    <state width="1146" height="206" key="GridCell.Tab.0.right" timestamp="1599021227598">
+    <state width="1146" height="206" key="GridCell.Tab.0.left/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599023380609" />
+    <state width="1146" height="206" key="GridCell.Tab.0.right" timestamp="1599023380610">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state width="1146" height="206" key="GridCell.Tab.0.right/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599021227598" />
+    <state width="1146" height="206" key="GridCell.Tab.0.right/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599023380610" />
     <state width="939" height="240" key="GridCell.Tab.1.bottom" timestamp="1599014937354">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
