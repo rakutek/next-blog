@@ -1,6 +1,8 @@
 import Document, { Head, Main, NextScript } from "next/document";
 import React from "react";
 
+import { GA_TRACKING_ID } from "../lib/gtag";
+
 const APP_NAME = "next-pwa example";
 const APP_DESCRIPTION = "This is an example of using next-pwa plugin";
 
@@ -11,8 +13,26 @@ export default class extends Document {
 
     render() {
         return (
-            <html lang="en" dir="ltr">
+            <html lang="ja" dir="ltr">
                 <Head>
+                    {/* Global Site Tag (gtag.js) - Google Analytics */}
+                    <script
+                        async
+                        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+                    />
+                    <script
+                        dangerouslySetInnerHTML={{
+                            __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+                        }}
+                    />
+
                     <meta name="application-name" content={APP_NAME} />
                     <meta name="apple-mobile-web-app-capable" content="yes" />
                     <meta
