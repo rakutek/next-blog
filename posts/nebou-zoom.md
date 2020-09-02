@@ -2,7 +2,7 @@
 title: "リモート授業で１限に寝坊したのでzoomに自動参加するshell scriptを作る"
 date: "2020-01-01"
 ---
-おはようございます！
+# おはようございます！
 
 さっき起きて、リモート授業なのに寝坊して１限の授業が欠席になってしまいました〜！
 テストが実施できない影響で平常点が重要らしいのに、、、
@@ -28,65 +28,84 @@ https://www.japan9.com/cgi/cron.cgi
 
  
 
-ちなみに、通常のリンクを踏んでブラウザからzoomを起動するときに出てくるポップアップ等は出てこないので完全に自動で参加できます
-
+# ちなみに、通常のリンクを踏んでブラウザからzoomを起動するときに出てくるポップアップ等は出てこないので完全に自動で参加できます
 
 ```javascript
-import Layout from "../components/Layout";
-import { getAllPostIds, getPostData } from "../lib/posts";
-import Head from "next/head";
 
-import styled from "styled-components";
-import media from "styled-media-query";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
+import remark from "remark";
+import html from "remark-html";
 
-const HeadingXl = styled.h1`
-    font-size: 2rem;
-    line-height: 1.3;
-    font-weight: 800;
-    letter-spacing: -0.05rem;
-    margin: 1rem 0;
-`;
+import hljs from "remark-highlight.js";
 
-const Article = styled.article`
-    max-width: 48rem;
+import "github-markdown-css";
+import "github-markdown-css/github-markdown.css";
+import "highlight.js/styles/default.css";
 
-    ${media.lessThan("small")`
-       word-break: break-all;
-`}
-`;
+const postsDirectory = path.join(process.cwd(), "posts");
 
-export default function Post({ postData }) {
-    return (
-        <Layout>
-            <Head>
-                <title>{postData.title}</title>
-            </Head>
-            <Article>
-                <HeadingXl>{postData.title}</HeadingXl>
+export function getSortedPostsData() {
+    // Get file names under /posts
+    const fileNames = fs.readdirSync(postsDirectory);
+    const allPostsData = fileNames.map((fileName) => {
+        // Remove ".md" from file name to get id
+        const id = fileName.replace(/\.md$/, "");
 
-                <div>{postData.date}</div>
-                <div
-                    dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
-                />
-            </Article>
-        </Layout>
-    );
+        // Read markdown file as string
+        const fullPath = path.join(postsDirectory, fileName);
+        const fileContents = fs.readFileSync(fullPath, "utf8");
+
+        // Use gray-matter to parse the post metadata section
+        const matterResult = matter(fileContents);
+
+        // Combine the data with the id
+        return {
+            id,
+            ...matterResult.data,
+        };
+    });
+    // Sort posts by date
+    return allPostsData.sort((a, b) => {
+        if (a.date < b.date) {
+            return 1;
+        } else {
+            return -1;
+        }
+    });
 }
 
-export async function getStaticPaths() {
-    const paths = getAllPostIds();
-    return {
-        paths,
-        fallback: false,
-    };
+export function getAllPostIds() {
+    const fileNames = fs.readdirSync(postsDirectory);
+    return fileNames.map((fileName) => {
+        return {
+            params: {
+                id: fileName.replace(/\.md$/, ""),
+            },
+        };
+    });
 }
 
-export async function getStaticProps({ params }) {
-    const postData = await getPostData(params.id);
+export async function getPostData(id) {
+    const fullPath = path.join(postsDirectory, `${id}.md`);
+    const fileContents = fs.readFileSync(fullPath, "utf8");
+
+    // Use gray-matter to parse the post metadata section
+    const matterResult = matter(fileContents);
+
+    // Use remark to convert markdown into HTML string
+    const processedContent = await remark()
+        .use(html)
+        .use(hljs)
+        .process(matterResult.content);
+    const contentHtml = processedContent.toString();
+
+    // Combine the data with the id and contentHtml
     return {
-        props: {
-            postData,
-        },
+        id,
+        contentHtml,
+        ...matterResult.data,
     };
 }
 

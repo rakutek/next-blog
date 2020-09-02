@@ -17,6 +17,7 @@ const Article = styled.article`
     max-width: 48rem;
 
     ${media.lessThan("small")`
+    max-width: 22rem;
        word-break: break-all;
 `}
 `;
