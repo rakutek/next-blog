@@ -9,7 +9,11 @@ const Light = styled.small`
 const List = styled.li`
     list-style: none;
     margin: 0;
-    padding-bottom: 7px;
+    padding-bottom: 2px;
+`;
+
+const Ol = styled.ol`
+    padding-left: 0;
 `;
 
 const Title = styled.a`
@@ -21,7 +25,7 @@ const IndexPage = ({ allPostsData }) => (
         <h1>Blog</h1>
 
         {allPostsData.map(({ id, date, title }) => (
-            <ol>
+            <Ol>
                 <List>
                     <Light>{date}</Light>
                     <br />
@@ -33,7 +37,7 @@ const IndexPage = ({ allPostsData }) => (
                         </Title>
                     </Link>
                 </List>
-            </ol>
+            </Ol>
         ))}
     </Layout>
 );
