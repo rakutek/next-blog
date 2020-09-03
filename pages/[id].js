@@ -1,6 +1,7 @@
 import Layout from "../components/Layout";
 import { getAllPostIds, getPostData } from "../lib/posts";
 import Head from "next/head";
+import Link from "next/link";
 
 import styled from "styled-components";
 import media from "styled-media-query";

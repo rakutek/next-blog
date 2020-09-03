@@ -15,16 +15,21 @@ const List = styled.li`
 const Ol = styled.ol`
     padding-left: 0;
 `;
-
 const Title = styled.a`
     font-size: 24px;
 `;
 
-const IndexPage = ({ allPostsData }) => (
+type Props = {
+    id?: string;
+    date?: string;
+    title?: string;
+};
+
+const IndexPage = ({ allPostsData }: any) => (
     <Layout title="rakutek.dev">
         <h1>Blog</h1>
 
-        {allPostsData.map(({ id, date, title }) => (
+        {allPostsData.map(({ id, date, title }: Props) => (
             <Ol>
                 <List>
                     <Light>{date}</Light>
