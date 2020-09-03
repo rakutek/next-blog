@@ -7,7 +7,10 @@ import "github-markdown-css/github-markdown.css";
 import "highlight.js/styles/a11y-dark.css";
 
 Router.events.on("routeChangeComplete", (url) => gtag.pageview(url));
-
-export default function App({ Component, pageProps }) {
+interface Props {
+    Component: any;
+    pageProps: any;
+}
+export default function App({ Component, pageProps }: Props) {
     return <Component {...pageProps} />;
 }
