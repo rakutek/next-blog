@@ -6,15 +6,27 @@
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e230f13-38d7-4443-80ef-0e851c21bbc1" name="デフォルト変更リスト" comment="GA導入できた">
+    <list default="true" id="3e230f13-38d7-4443-80ef-0e851c21bbc1" name="デフォルト変更リスト" comment="シンタックスハイライト適用した">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_document.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/_document.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/sw.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/sw.js.map" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,13 +55,6 @@
     <option name="CREATE_PULL_REQUEST_DEFAULT_BRANCH" value="dev" />
     <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_USER" value="rakutek" />
     <option name="CREATE_PULL_REQUEST_DEFAULT_REPO_NAME" value="next-blog" />
-  </component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="hiddenUrls">
-      <set>
-        <option value="https://github.com/rakutek/next-blog" />
-      </set>
-    </option>
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -317,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599023670485</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="シンタックスハイライト適用した">
+      <created>1599109151910</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1599109151910</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,7 +351,6 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Prettierしてなかった" />
     <MESSAGE value="footer削除" />
     <MESSAGE value="prettier" />
     <MESSAGE value="prettier2" />
@@ -364,7 +375,8 @@
     <MESSAGE value="LightHouseでliにolがないって起こられた" />
     <MESSAGE value="olのpaddingを消した" />
     <MESSAGE value="GA導入できた" />
-    <option name="LAST_COMMIT_MESSAGE" value="GA導入できた" />
+    <MESSAGE value="シンタックスハイライト適用した" />
+    <option name="LAST_COMMIT_MESSAGE" value="シンタックスハイライト適用した" />
   </component>
   <component name="WindowStateProjectService">
     <state x="284" y="181" key="#TypeScript" timestamp="1599019077581">
@@ -455,10 +467,18 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="25" y="23" key="SettingsEditor/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599019052115" />
-    <state x="80" y="287" key="Vcs.Push.Dialog.v2" timestamp="1599108910458">
+    <state x="435" y="174" key="VCS.ChangeListViewerDialog" timestamp="1599109601521">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="80" y="287" key="Vcs.Push.Dialog.v2/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599108910458" />
+    <state x="435" y="174" key="VCS.ChangeListViewerDialog/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599109601521" />
+    <state x="80" y="287" key="Vcs.Push.Dialog.v2" timestamp="1599109207838">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="80" y="287" key="Vcs.Push.Dialog.v2/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599109207838" />
+    <state x="1103" y="181" key="VcsDiffUtil.ChangesDialog" timestamp="1599109130274">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="1103" y="181" key="VcsDiffUtil.ChangesDialog/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599109130274" />
     <state x="466" y="403" key="cloudConfig.SelfSettingsDialog" timestamp="1599019595705">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
@@ -471,9 +491,9 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="276" y="442" key="git4idea.remote.GitConfigureRemotesDialog/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1598926372899" />
-    <state x="145" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1599022076429">
+    <state x="145" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1599109643889">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="145" y="258" width="670" height="676" key="search.everywhere.popup/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599022076429" />
+    <state x="145" y="258" width="670" height="676" key="search.everywhere.popup/-1080.150.1080.1897/0.23.1920.1057/0.1103.2048.1257@0.23.1920.1057" timestamp="1599109643889" />
   </component>
 </project>
