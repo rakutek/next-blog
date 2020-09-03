@@ -50,6 +50,7 @@ export default class extends Document {
 
                     <link
                         rel="apple-touch-icon"
+                        q
                         sizes="180x180"
                         href="../../public/icons/apple-touch-icon.png"
                     />
